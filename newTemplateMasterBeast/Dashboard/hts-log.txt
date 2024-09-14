@@ -1,0 +1,37 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 31 Jul 2024 10:20:21 at https://medash.netlify.app/html/index-hos-dashboard +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://medash.netlify.app/html/index-hos-dashboard -O1 "C:\Users\Orange\Desktop\Template\Duha" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:20:32	Warning: 	file not stored in cache due to bogus state (incomplete type with OK (200), size 0): https://medash.netlify.app/assets/css/responsive.css
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/crypto-dash/login-bg.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/images/login-logo.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/res-dash/item1-bg.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/res-dash/item2-bg.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/res-dash/item3-bg.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/res-dash/pattern.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/img/core-img/cards-bg.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/res-dash/pattern2.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/crypto-dash/dotted-bg.jpg (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/crypto-dash/ref-bg1.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/crypto-dash/ref-bg2.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/data/crypto-dash/ref-bg3.png (from https://medash.netlify.app/assets/css/style.css)
+10:22:29	Error: 	"Not Found" (404) at link https://medash.netlify.app/html/index-dashboard.html (from https://medash.netlify.app/html/hos-faq)
+10:22:31	Error: 	"Not Found" (404) at link https://medash.netlify.app/html/hos-staff-profile.html (from https://medash.netlify.app/html/hos-all-doctors)
+10:22:31	Error: 	"Not Found" (404) at link https://medash.netlify.app/html/index.html (from https://medash.netlify.app/html/hos-add-doctor)
+10:22:31	Error: 	"Not Found" (404) at link https://medash.netlify.app/html/hos-patients.html (from https://medash.netlify.app/html/hos-add-doctor)
+10:22:42	Error: 	"Not Found" (404) at link https://medash.netlify.app/html/charts-flot-stacked.html (from https://medash.netlify.app/html/charts-flot-area)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/sort_both.png (from https://medash.netlify.app/assets/plugins/datatables/css/jquery.dataTables.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/sort_asc.png (from https://medash.netlify.app/assets/plugins/datatables/css/jquery.dataTables.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/sort_desc.png (from https://medash.netlify.app/assets/plugins/datatables/css/jquery.dataTables.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/sort_asc_disabled.png (from https://medash.netlify.app/assets/plugins/datatables/css/jquery.dataTables.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/sort_desc_disabled.png (from https://medash.netlify.app/assets/plugins/datatables/css/jquery.dataTables.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/collection.png (from https://medash.netlify.app/assets/plugins/datatables/css/dataTables.tableTools.min.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/collection_hover.png (from https://medash.netlify.app/assets/plugins/datatables/css/dataTables.tableTools.min.css)
+10:23:16	Error: 	"Not Found" (404) at link https://medash.netlify.app/assets/plugins/datatables/images/background.png (from https://medash.netlify.app/assets/plugins/datatables/css/dataTables.tableTools.min.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 55 seconds : 302 links scanned, 276 files written (9523859 bytes overall) [2901052 bytes received at 16577 bytes/sec], 8342841 bytes transferred using HTTP compression in 165 files, ratio 18%
+(25 errors, 1 warnings, 0 messages)
