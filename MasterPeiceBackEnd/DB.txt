@@ -1,0 +1,155 @@
+-- إنشاء قاعدة البيانات
+CREATE DATABASE MedicalApp;
+GO
+
+-- استخدام قاعدة البيانات
+USE MedicalApp;
+GO
+
+-- جدول المستخدمين (Users)
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    Role NVARCHAR(20) CHECK (Role IN ('Doctor', 'Patient', 'Admin')),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE() ON UPDATE GETDATE()
+);
+GO
+
+-- جدول التخصصات الطبية (Specialties) مع وصف
+CREATE TABLE Specialties (
+    SpecialtyID INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(MAX) -- إضافة عمود الوصف
+);
+GO
+
+-- جدول الأطباء (Doctors)
+CREATE TABLE Doctors (
+    DoctorID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    SpecialtyID INT NOT NULL,
+    Name NVARCHAR(100) NOT NULL,
+    Qualifications NVARCHAR(MAX),
+    ClinicAddress NVARCHAR(255),
+    Phone NVARCHAR(20),
+    Availability NVARCHAR(MAX),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (SpecialtyID) REFERENCES Specialties(SpecialtyID)
+);
+GO
+
+-- جدول الإعلانات للأطباء (DoctorAds)
+CREATE TABLE DoctorAds (
+    AdID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorID INT NOT NULL,
+    Title NVARCHAR(255) NOT NULL,
+    Content NVARCHAR(MAX) NOT NULL,
+    PublishedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
+);
+GO
+
+-- جدول التعليقات (Comments)
+CREATE TABLE Comments (
+    CommentID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    DoctorID INT NOT NULL,
+    Comment NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
+);
+GO
+
+-- جدول التقييمات (Reviews)
+CREATE TABLE Reviews (
+    ReviewID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    DoctorID INT NOT NULL,
+    Rating INT CHECK (Rating BETWEEN 1 AND 5) NOT NULL, -- تقييم من 1 إلى 5
+    Review NVARCHAR(MAX),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
+);
+GO
+
+-- جدول التشخيصات (Diagnoses)
+CREATE TABLE Diagnoses (
+    DiagnosisID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorID INT NOT NULL,
+    UserID INT NOT NULL,
+    Diagnosis NVARCHAR(MAX) NOT NULL,
+    Date DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO
+
+-- جدول الإداريين (Admins)
+CREATE TABLE Admins (
+    AdminID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    Department NVARCHAR(100),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO
+
+-- جدول المواعيد (Appointments)
+CREATE TABLE Appointments (
+    AppointmentID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorID INT NOT NULL,
+    Date DATE NOT NULL,
+    Time TIME NOT NULL,
+    Available BIT NOT NULL,
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
+);
+GO
+
+-- جدول حجوزات المواعيد (Bookings)
+CREATE TABLE Bookings (
+    BookingID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    AppointmentID INT NOT NULL,
+    BookingDate DATETIME DEFAULT GETDATE(),
+    PaymentStatus NVARCHAR(20) CHECK (PaymentStatus IN ('Paid', 'Pending', 'Failed')),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (AppointmentID) REFERENCES Appointments(AppointmentID)
+);
+GO
+
+-- جدول العلاجات (Treatments)
+CREATE TABLE Treatments (
+    TreatmentID INT IDENTITY(1,1) PRIMARY KEY,
+    DoctorID INT NOT NULL,
+    UserID INT NOT NULL,
+    Description NVARCHAR(MAX),
+    Date DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO
+
+-- جدول لوحة التحكم (AdminActions)
+CREATE TABLE AdminActions (
+    AdminActionID INT IDENTITY(1,1) PRIMARY KEY,
+    AdminID INT NOT NULL,
+    ActionType NVARCHAR(50) CHECK (ActionType IN ('AddDoctor', 'EditPatient', 'DeleteAppointment', 'AddSpecialty', 'Other')),
+    Timestamp DATETIME DEFAULT GETDATE(),
+    Details NVARCHAR(MAX),
+    FOREIGN KEY (AdminID) REFERENCES Users(UserID)
+);
+GO
+
+-- جدول المدونات (Blogs)
+CREATE TABLE Blogs (
+    BlogID INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(255) NOT NULL,
+    Content NVARCHAR(MAX) NOT NULL,
+    PublishedAt DATETIME DEFAULT GETDATE()
+);
+GO
+

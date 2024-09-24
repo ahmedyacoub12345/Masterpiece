@@ -1,0 +1,6 @@
+@MasterPeiceBackEnd_HostAddress = http://localhost:5117
+
+GET {{MasterPeiceBackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

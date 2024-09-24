@@ -132,6 +132,9 @@
             <li>
               <a href="contact.html">Contact Us</a>
             </li>
+            <li>
+              <a href="SignIn.html">Login & Register</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -290,6 +293,11 @@
                     <li>
                       <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </li>
+                    <li>
+                      <a href="Profile.html" target="_blank">
+                        <i class="fas fa-user"></i>
+                      </a>
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -352,6 +360,9 @@
 
                       <li>
                         <a href="contact.html">Contact</a>
+                      </li>
+                      <li>
+                        <a href="SignIn.html">Login & Register</a>
                       </li>
                     </ul>
                   </nav>
@@ -672,11 +683,11 @@
               <div class="sec-icon">
                 <i class="flaticon-ecg"></i>
               </div>
-              <h2 class="h1">Get Our Services</h2>
+              <h2 class="h1">Specialties</h2>
               <p>
-                Proactively revolutionize granular customer service after
-                pandemic internal or "organic" sources istinctively impact
-                proactive human
+                Enhance specialized medical care in the post-pandemic era by
+                using innovative methods and internal resources to improve
+                patient outcomes and personalize healthcare.
               </p>
             </div>
           </div>
@@ -685,120 +696,9 @@
           class="row vs-carousel wow fadeIn"
           data-wow-delay="0.3s"
           data-slide-show="3"
-        >
-          <div class="col-xl-4 mb-25">
-            <div class="service-box">
-              <div class="sr-img">
-                <img
-                  src="assets/img/service/sr-2-1.jpg"
-                  alt="Service Image"
-                  class="w-100"
-                />
-              </div>
-              <div class="sr-icon">
-                <i class="flaticon-computer-mouse"></i>
-              </div>
-              <div class="sr-content">
-                <h3 class="h4">
-                  <a class="text-reset" href="service.html"
-                    >Medical Advices & Checkup</a
-                  >
-                </h3>
-                <p class="fs-xs">
-                  Continually evisculate goal-oriented portals rather than
-                  prospective channels. excellent customize life
-                </p>
-              </div>
-              <a href="service.html" class="icon-btn style4"
-                ><i class="far fa-long-arrow-alt-right"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-xl-4 mb-25">
-            <div class="service-box">
-              <div class="sr-img">
-                <img
-                  src="assets/img/service/sr-2-2.jpg"
-                  alt="Service Image"
-                  class="w-100"
-                />
-              </div>
-              <div class="sr-icon">
-                <i class="flaticon-blood-pressure"></i>
-              </div>
-              <div class="sr-content">
-                <h3 class="h4">
-                  <a class="text-reset" href="service.html"
-                    >Cardiovascular for Women's</a
-                  >
-                </h3>
-                <p class="fs-xs">
-                  Continually evisculate goal-oriented portals rather than
-                  prospective channels. excellent customize life
-                </p>
-              </div>
-              <a href="service.html" class="icon-btn style4"
-                ><i class="far fa-long-arrow-alt-right"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-xl-4 mb-25">
-            <div class="service-box">
-              <div class="sr-img">
-                <img
-                  src="assets/img/service/sr-2-3.jpg"
-                  alt="Service Image"
-                  class="w-100"
-                />
-              </div>
-              <div class="sr-icon">
-                <i class="flaticon-stethoscope-1"></i>
-              </div>
-              <div class="sr-content">
-                <h3 class="h4">
-                  <a class="text-reset" href="service.html"
-                    >Heart Checkup or Cardiovascular</a
-                  >
-                </h3>
-                <p class="fs-xs">
-                  Continually evisculate goal-oriented portals rather than
-                  prospective channels. excellent customize life
-                </p>
-              </div>
-              <a href="service.html" class="icon-btn style4"
-                ><i class="far fa-long-arrow-alt-right"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-xl-4 mb-25">
-            <div class="service-box">
-              <div class="sr-img">
-                <img
-                  src="assets/img/service/sr-2-4.jpg"
-                  alt="Service Image"
-                  class="w-100"
-                />
-              </div>
-              <div class="sr-icon">
-                <i class="flaticon-quality-of-life"></i>
-              </div>
-              <div class="sr-content">
-                <h3 class="h4">
-                  <a class="text-reset" href="service.html"
-                    >Laboratory & Pathology Drag</a
-                  >
-                </h3>
-                <p class="fs-xs">
-                  Continually evisculate goal-oriented portals rather than
-                  prospective channels. excellent customize life
-                </p>
-              </div>
-              <a href="service.html" class="icon-btn style4"
-                ><i class="far fa-long-arrow-alt-right"></i
-              ></a>
-            </div>
-          </div>
-        </div>
+          id="SpecialtyContainer"
+          style="display: flex; flex-direction: row; flex-wrap: wrap"
+        ></div>
       </div>
     </section>
     <!--==============================
@@ -1079,7 +979,7 @@
     <!--==============================
     Team Area
     ==============================-->
-    <section class="vs-team-wrapper team-layout2 space" id="team">
+    <!-- <section class="vs-team-wrapper team-layout2 space" id="team">
       <div
         class="parallax"
         data-parallax-image="assets/img/bg/bg-shape-5.jpg"
@@ -1213,7 +1113,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--==============================
     Appointment Form Area 
     ==============================-->
@@ -1373,7 +1273,7 @@
     <!--==============================
     Blog Area
     ==============================-->
-    <section class="vs-blog-wrapper space-md-bottom space-top">
+    <!-- <section class="vs-blog-wrapper space-md-bottom space-top">
       <div class="container">
         <div class="row text-center justify-content-center">
           <div
@@ -1526,7 +1426,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--==============================
     Brand Area
     ==============================-->
@@ -1755,6 +1655,7 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/Specialty.js"></script>
   </body>
 
   <!-- Mirrored from html.vecurosoft.com/medixi/demo/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Sep 2024 13:48:03 GMT -->

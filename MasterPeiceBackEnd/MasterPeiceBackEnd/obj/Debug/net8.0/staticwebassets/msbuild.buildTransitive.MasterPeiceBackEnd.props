@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MasterPeiceBackEnd.props" />
+</Project>
