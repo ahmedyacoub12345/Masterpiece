@@ -468,7 +468,7 @@
                       />
                       <i class="fal small fa-user"></i>
                     </div>
-                    <div class="col-lg-6 form-group">
+                    <!-- <div class="col-lg-6 form-group">
                       <input
                         type="text"
                         id="doctorEmail"
@@ -487,7 +487,7 @@
                         disabled
                       />
                       <i class="fal small fa-phone"></i>
-                    </div>
+                    </div> -->
                     <div class="col-lg-6 form-group">
                       <input
                         type="text"
@@ -515,15 +515,7 @@
                       />
                       <i class="fal small fa-phone"></i>
                     </div>
-                    <div class="col-lg-6 form-group">
-                      <input
-                        type="text"
-                        id="bookingDateTime"
-                        class="dateTime-pick form-control style3"
-                        placeholder="Select Date & Time"
-                      />
-                      <i class="fal small fa-calendar-alt"></i>
-                    </div>
+
                     <div class="col-lg-6 form-group">
                       <select id="bookingTime" class="form-select style3">
                         <option hidden disabled selected>Select Time</option>
@@ -536,7 +528,14 @@
                         <option value="15:00:00">15:00 - 16:00</option>
                         <option value="16:00:00">16:00 - 17:00</option>
                       </select>
+                      <p
+                        id="availabilityMessage"
+                        style="color: red; display: none"
+                      >
+                        The doctor is not available today.
+                      </p>
                     </div>
+
                     <div class="col-xl-12 text-center">
                       <button
                         id="submitBooking"

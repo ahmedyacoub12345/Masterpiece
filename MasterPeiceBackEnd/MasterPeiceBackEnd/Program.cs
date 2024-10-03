@@ -13,7 +13,6 @@ using MasterPeiceBackEnd.DTOs;
 using MasterPieceBackEnd.Model;
 using System.Text.Json.Serialization;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -62,6 +61,7 @@ builder.Services.AddSerilog();
 
 // Register TokenGenerator as a singleton or transient service
 builder.Services.AddSingleton<TokenGenerator>(); // or .AddTransient<TokenGenerator>()
+builder.Services.AddSingleton<MasterPeiceBackEnd.TokenReaderNS.TokenReader>(); // or .AddTransient<TokenGenerator>()
 
 // Retrieve JWT settings from configuration
 var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -146,6 +146,7 @@ builder.Services.AddSingleton<IConverter, SynchronizedConverter>(provider =>
 
 
 var app = builder.Build();
+app.UseStaticFiles();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
@@ -161,9 +162,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseRouting();
+
+//app.UseRouting();
 
 app.UseCors("Development");
 

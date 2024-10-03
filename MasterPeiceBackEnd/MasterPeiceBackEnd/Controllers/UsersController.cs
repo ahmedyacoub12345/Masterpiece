@@ -7,13 +7,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 using static MasterPeiceBackEnd.Shared.ImageSaver;
+using Microsoft.AspNetCore.Authorization;
+using MasterPeiceBackEnd.TokenReaderNS;
+using Microsoft.IdentityModel.Tokens;
 
 
 namespace MasterPeiceBackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class UsersController : ControllerBase
     {
         private readonly MedicalAppContext _db;
@@ -21,18 +24,19 @@ namespace MasterPeiceBackEnd.Controllers
         private readonly EmailService _emailService;
         private readonly IConfiguration _config;
         private readonly IConverter _converter;
+        private readonly MasterPeiceBackEnd.TokenReaderNS.TokenReader _tokenReader;
 
-
-        public UsersController(MedicalAppContext db, TokenGenerator tokenGenerator, EmailService emailService, IConfiguration config, IConverter converter)
+        public UsersController(MedicalAppContext db, TokenGenerator tokenGenerator, MasterPeiceBackEnd.TokenReaderNS.TokenReader tokenReader, EmailService emailService, IConfiguration config, IConverter converter)
         {
             _db = db;
             _tokenGenerator = tokenGenerator;
             _emailService = emailService;
             _config = config;
             _converter = converter;
+            _tokenReader = tokenReader;
         }
         [HttpGet]
-        public IActionResult GetAllUsers() 
+        public IActionResult GetAllUsers()
         {
             var data = _db.Users.ToList();
             return Ok(data);
@@ -191,6 +195,44 @@ namespace MasterPeiceBackEnd.Controllers
             return BadRequest();
         }
 
+        [Authorize]
+        [HttpGet("getCurrentUserInfo")]
+        public IActionResult GetCurrentUser()
+        {
+            var user = GetUser();
+            if (user == null)
+                return NotFound("User not found.");
+
+            return Ok(user);
+        }
+
+        private User? GetUser()
+        {
+
+
+            // Check if Authorization header exists
+            var authHeader = Request.Headers["Authorization"].ToString();
+            if (string.IsNullOrEmpty(authHeader) || !authHeader.StartsWith("Bearer "))
+            {
+                Console.WriteLine("Authorization header is missing or malformed.");
+                return null;
+            }
+
+            // Extract token from Authorization header
+            var token = authHeader.Split(' ')[1];
+
+            var principal = _tokenReader.ValidateToken(token);
+            if (principal?.Identity?.Name == null)
+            {
+                Console.WriteLine("Invalid token or missing claims.");
+                return null;
+            }
+            return _db.Users.
+                Include(u => u.Doctors).
+                ThenInclude(u => u.Availabilities).
+                Include(u => u.Admins).FirstOrDefault(u => u.Username == principal.Identity.Name);
+
+        }
 
     }
 }

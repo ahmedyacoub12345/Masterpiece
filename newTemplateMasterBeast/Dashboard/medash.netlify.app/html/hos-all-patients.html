@@ -43,7 +43,117 @@
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- CORE CSS TEMPLATE - END -->
+     <!-- Favicon -->
+    <link
+    rel="shortcut icon"
+    href="../assets/images/favicon.png"
+    type="image/x-icon"
+  />
+  <!-- For iPhone -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    href="../assets/images/apple-touch-icon-57-precomposed.png"
+  />
+  <!-- For iPhone 4 Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="114x114"
+    href="../assets/images/apple-touch-icon-114-precomposed.png"
+  />
+  <!-- For iPad -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="72x72"
+    href="../assets/images/apple-touch-icon-72-precomposed.png"
+  />
+  <!-- For iPad Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="144x144"
+    href="../assets/images/apple-touch-icon-144-precomposed.png"
+  />
 
+  <!-- CORE CSS FRAMEWORK - START -->
+  <link
+    href="../assets/plugins/pace/pace-theme-flash.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/font-awesome/css/font-awesome.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/webfont/cryptocoins.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/css/animate.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS FRAMEWORK - END -->
+
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+  <link
+    href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/morris-chart/css/morris.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/calendar/fullcalendar.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/icheck/skins/minimal/minimal.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+  <!-- CORE CSS TEMPLATE - START -->
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link
+    href="../assets/css/responsive.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS TEMPLATE - END -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <!-- END HEAD -->
 
@@ -529,7 +639,7 @@
 
         <!-- START CONTENT -->
         <section id="main-content" class=" ">
-            <div class="wrapper main-wrapper row" style=''>
+            <div class="wrapper main-wrapper row">
 
                 <div class='col-xs-12'>
                     <div class="page-title">
@@ -545,9 +655,9 @@
 
                 <div class="clearfix"></div>
                 <!-- MAIN CONTENT AREA STARTS -->
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
+                <div id="AllPatients">
+                <!-- <div class="col-lg-4 col-md-6">
+                    <section class="box">
                         <div class="content-body p">
                             <div class="row">
                                 <div class="doctors-list patient relative">
@@ -583,7 +693,7 @@
                                             </div>
                                             
                                         </div>
-                                    </div><!-- end row -->
+                                    </div>
                                     
                                     <div class="col-xs-12 mb-30">
                                         <div class="form-group no-mb">
@@ -594,416 +704,15 @@
                             </div>
                         </div>
                     </section>
+                </div> -->
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-2.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Finder Johuna</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 43</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-3.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas recent"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Samy Wolhalf</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Female</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 25</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-4.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Carri Busey</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 23</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-5.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas away"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Arthur John</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 29</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/profile.jpg" class="rad-50 center-block" alt="">
-                                            <div class="stutas recent"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Samy Wolhalf</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 41</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-1.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas recent"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Smith Wright</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 23</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-2.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Finder Johuna</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 43</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="../data/profile/avatar-3.png" class="rad-50 center-block" alt="">
-                                            <div class="stutas away"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : Samy Wolhalf</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Male</h5>
-                                                            <h6>Patient  Gender</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">Age: 41</h5>
-                                                            <h6>Years Old</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                
 
                 <div class="clearfix"></div>
 
-                <div class="col-xs-12 mb-30 mt-15">
-                    <div class="form-group no-mb text-center">
-                        <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%;max-width:300px"> Load more</button>
-                    </div>
-                </div>
-
+                
+            </div>
             
                 
 
@@ -1204,6 +913,7 @@
     <!-- CORE TEMPLATE JS - START -->
     <script src="../assets/js/scripts.js"></script>
     <!-- END CORE TEMPLATE JS - END -->
+     <script src="../assets/js/GetPatients.js"></script>
 
 </body>
 

@@ -8,8 +8,5 @@
 
         public TimeOnly Time { get; set; }
 
-        public DateTime BookingDate { get; set; }
-
-        public string PaymentStatus { get; set; } = null!;
     }
 }

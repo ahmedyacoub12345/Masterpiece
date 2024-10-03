@@ -1,10 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\",
+  "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpeicebackend\\masterpeicebackend\\controllers\\appiontmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\controllers\\appiontmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Orange\\AppData\\Local\\SourceServer\\a04270d31cdf23702aa3e185779455d982c09fd094fd479534da1522447c74a6\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\dtos\\updatedoctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\dtos\\updatedoctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\dtos\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\dtos\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\data\\medicalappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\data\\medicalappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\models\\availability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\models\\availability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|c:\\users\\orange\\desktop\\masterpiece\\masterpeicebackend\\masterpeicebackend\\shared\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE873D6-75BD-4042-A21F-261476A09AE1}|MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj|solutionrelative:masterpeicebackend\\shared\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +49,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppiontmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\AppiontmentsController.cs",
-              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Controllers\\AppiontmentsController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\AppiontmentsController.cs",
-              "RelativeToolTip": "MasterPeiceBackEnd\\Controllers\\AppiontmentsController.cs",
-              "ViewState": "AQIAAN4AAAAAAAAAAAAQwOwAAAAJAAAA",
+              "DocumentIndex": 2,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\AppData\\Local\\SourceServer\\a04270d31cdf23702aa3e185779455d982c09fd094fd479534da1522447c74a6\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\a04270d31cdf23702aa3e185779455d982c09fd094fd479534da1522447c74a6\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\Orange\\AppData\\Local\\SourceServer\\a04270d31cdf23702aa3e185779455d982c09fd094fd479534da1522447c74a6\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\a04270d31cdf23702aa3e185779455d982c09fd094fd479534da1522447c74a6\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs [Read Only]",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAowCAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T07:18:11.813Z",
+              "WhenOpened": "2024-10-02T07:44:17.62Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateDoctorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\DTOs\\UpdateDoctorDTO.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\DTOs\\UpdateDoctorDTO.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\DTOs\\UpdateDoctorDTO.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\DTOs\\UpdateDoctorDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T21:28:05.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Availability.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Models\\Availability.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Models\\Availability.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Models\\Availability.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Models\\Availability.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T21:08:48.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Models\\User.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Models\\User.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Models\\User.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA2wCwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T21:08:39.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoctorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\DTOs\\DoctorDTO.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\DTOs\\DoctorDTO.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\DTOs\\DoctorDTO.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\DTOs\\DoctorDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T20:46:57.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MedicalAppContext.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Data\\MedicalAppContext.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Data\\MedicalAppContext.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Data\\MedicalAppContext.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Data\\MedicalAppContext.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAswJQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T20:37:22.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Models\\Doctor.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Models\\Doctor.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA8wDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T20:35:29.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Shared\\EmailSender.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Shared\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Shared\\EmailSender.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Shared\\EmailSender.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:18:33.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAIwGMAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T16:22:27.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "MasterPeiceBackEnd\\Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "MasterPeiceBackEnd\\Controllers\\DoctorsController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAkwDYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T14:10:44.22Z",
               "EditorCaption": ""
             }
           ]

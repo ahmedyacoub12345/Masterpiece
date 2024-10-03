@@ -22,6 +22,35 @@ namespace MasterPeiceBackEnd.Controllers
             var data = _db.Bookings.ToList();
             return Ok(data);
         }
+        [HttpGet("GetDoctorBooking/{doctorId}")]
+        public IActionResult GetDoctorBooking(int doctorId)
+        {
+            var bookings = _db.Bookings.Where(b => b.DoctorId == doctorId).ToList();
+            var doctor = _db.Doctors
+                .Where(d => d.DoctorId == doctorId)
+                .Select(d => new
+                {
+                    DoctorId = d.DoctorId,
+                    Name = d.Name,
+                    Email = d.Email,
+                    Phone = d.Phone,
+                    Qualifications = d.Qualifications,
+                    ClinicAddress = d.ClinicAddress
+                })
+                .FirstOrDefault();
+
+            if (doctor == null)
+                return NotFound("Doctor not found.");
+
+            var response = new
+            {
+                Doctor = doctor,
+                Bookings = bookings
+            };
+
+            return Ok(response);
+        }
+
 
         [HttpPost("BookAnAppointment")]
         public IActionResult CreateBooking([FromForm] RequestBookingDTO booking)
@@ -38,7 +67,6 @@ namespace MasterPeiceBackEnd.Controllers
 
             var existingBooking = _db.Bookings
                 .FirstOrDefault(b => b.DoctorId == booking.DoctorId
-                                     && b.BookingDate.Date == booking.BookingDate.Date
                                      && b.Time == booking.Time);
 
             if (existingBooking != null)
@@ -49,8 +77,8 @@ namespace MasterPeiceBackEnd.Controllers
                 UserId = booking.UserId,
                 DoctorId = booking.DoctorId,
                 Time = booking.Time,
-                BookingDate = booking.BookingDate,
-                PaymentStatus = booking.PaymentStatus
+                BookingDate = DateTime.Now,
+                PaymentStatus = "Pendding"
             };
 
             _db.Bookings.Add(book);
@@ -74,14 +102,20 @@ namespace MasterPeiceBackEnd.Controllers
                 doctorClinicAddress = doctor.ClinicAddress,
                 doctorPhone = doctor.Phone,
                 time = book.Time,
-                bookingDate = book.BookingDate,
+                bookingDate = DateTime.Now,
                 paymentStatus = book.PaymentStatus,
                 
             };
 
             return CreatedAtAction(nameof(CreateBooking), new { id = book.BookingId }, response);
         }
+        [HttpGet("GetTime/{id}")]
+        public IActionResult getTime(int id)
+        {
+            var data = _db.Bookings.Where(a=>a.DoctorId==id).Select(a=>a.Time).ToList();
+            return Ok(data);
 
+        }
 
     }
 }

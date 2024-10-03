@@ -43,6 +43,177 @@
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- CORE CSS TEMPLATE - END -->
+     <!-- Favicon -->
+    <link
+    rel="shortcut icon"
+    href="../assets/images/favicon.png"
+    type="image/x-icon"
+  />
+  <!-- For iPhone -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    href="../assets/images/apple-touch-icon-57-precomposed.png"
+  />
+  <!-- For iPhone 4 Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="114x114"
+    href="../assets/images/apple-touch-icon-114-precomposed.png"
+  />
+  <!-- For iPad -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="72x72"
+    href="../assets/images/apple-touch-icon-72-precomposed.png"
+  />
+  <!-- For iPad Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="144x144"
+    href="../assets/images/apple-touch-icon-144-precomposed.png"
+  />
+
+  <!-- CORE CSS FRAMEWORK - START -->
+  <link
+    href="../assets/plugins/pace/pace-theme-flash.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/font-awesome/css/font-awesome.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/webfont/cryptocoins.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/css/animate.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS FRAMEWORK - END -->
+
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+  <link
+    href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/morris-chart/css/morris.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/calendar/fullcalendar.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/icheck/skins/minimal/minimal.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+  <!-- CORE CSS TEMPLATE - START -->
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link
+    href="../assets/css/responsive.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS TEMPLATE - END -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.8
+      ); /* Darker background for contrast */
+    }
+
+    .modal-content {
+      background-color: #ffffff; /* White background */
+      margin: 10% auto;
+      padding: 30px;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+      width: 90%;
+      max-width: 400px; /* Fixed max width */
+      text-align: center; /* Centered text */
+      animation: fadeIn 0.3s; /* Smooth entrance animation */
+    }
+
+    .close {
+      color: #888; /* Grey color */
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #d9534f; /* Change color to a stronger red on hover */
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-message {
+      font-size: 18px; /* Font size for the message */
+      color: #333; /* Dark text for readability */
+      margin-top: 15px; /* Space above the message */
+      line-height: 1.5; /* Improved line spacing */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0; /* Start fully transparent */
+      }
+      to {
+        opacity: 1; /* End fully opaque */
+      }
+    }
+  </style>
 
 </head>
 <!-- END HEAD -->
@@ -529,7 +700,7 @@
 
         <!-- START CONTENT -->
         <section id="main-content" class="">
-            <div class="wrapper main-wrapper row" style="">
+            <div class="wrapper main-wrapper row" >
 
                 <div class="col-xs-12">
                     <div class="page-title">
@@ -563,12 +734,12 @@
                     <div class="add-header-wrapper gradient-blue curved-section text-center">
                         <h2 class="uppercase bold w-text">Edit Doctor</h2>
                         <div class="before-text">Edit Doctor</div>
-                        <p class="g-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto magni consequatur excepturi ab veritatis id facere facilis tempora sit amet, consectetur adipisicing elit. Iusto magni.</p>
+                        <p class="g-text">Adding or updating a doctor's information is essential for maintaining quality healthcare records.</p>
                     </div>
-
-                    <div class=" bg-w">
+                
+                    <div class="bg-w">
                         <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-                            <section class="box ">
+                            <section class="box">
                                 <header class="panel_header">
                                     <h2 class="title pull-left">Basic Info</h2>
                                     <div class="actions panel_actions pull-right">
@@ -579,188 +750,93 @@
                                 </header>
                                 <div class="content-body">
                                     <div class="row">
-                                        <form action="#" method="post">
+                                        <form id="editDoctorForm">
                                             <div class="col-xs-12">
                                                 <div class="form-group">
-                                                    <label class="form-label" for="field-1">Name</label>
-                                                    <span class="desc"></span>
+                                                    <label class="form-label" for="name">Name</label>
                                                     <div class="controls">
-                                                        <input type="text" value="Dr. Arthur Yurey" class="form-control" id="field-1">
+                                                        <input type="text" value="" class="form-control" id="name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="form-label" for="field-5">Date of Birth</label>
-                                                    <span class="desc">e.g. "04/03/2015"</span>
+                                                    <label class="form-label" for="specialty">Specialty</label>
                                                     <div class="controls">
-                                                        <input type="text" class="form-control datepicker" data-format="mm/dd/yyyy" value="05/02/1985">
+                                                        <input type="text" class="form-control" value="" id="specialty">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="form-label" for="field-5">Gender</label>
-                                                    <span class="desc"></span>
-                                                    <select class="form-control ">
-                                                        <option></option>
-                                                        <option selected="selected">Male</option>
-                                                        <option>Female</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-1">Profile Image</label>
-                                                    <span class="desc"></span>
-                                                    <img class="img-responsive" src="../data/hos-dash/doc1.jpg" alt="" style="max-width:120px;">
+                                                    <label class="form-label" for="qualifications">Qualifications</label>
                                                     <div class="controls">
-                                                        <input type="file" class="form-control" id="field-5">
+                                                        <input type="text" class="form-control" id="qualifications">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="form-label" for="field-1">Speciality</label>
-                                                    <span class="desc">Eg: Surgeon</span>
+                                                    <label class="form-label" for="clinicAddress">Clinic Address</label>
                                                     <div class="controls">
-                                                        <input type="text" class="form-control" value="Neurosurgery" id="field-1">
+                                                        <input type="text" class="form-control" id="clinicAddress">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="form-label" for="field-6">Brief</label>
-                                                    <span class="desc">e.g. "Enter any size of text description here"</span>
+                                                    <label class="form-label" for="phone">Phone</label>
                                                     <div class="controls">
-                                                        <textarea class="form-control autogrow" cols="5" id="field-6" style="overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 74px;">The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery.</textarea>
+                                                        <input type="text" class="form-control" id="phone">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="form-label" for="field-1">Website URL</label>
-                                                    <span class="desc"></span>
+                                                    <label class="form-label" for="email">Email</label>
                                                     <div class="controls">
-                                                        <input type="text" class="form-control" value="http://www.example.com" id="field-61">
+                                                        <input type="email" class="form-control" id="email">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label" for="description">Description</label>
+                                                    <div class="controls">
+                                                        <textarea class="form-control autogrow" cols="5" id="description" style="overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 74px;"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label" for="degree">Degree</label>
+                                                    <div class="controls">
+                                                        <input type="text" class="form-control" id="degree">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label" for="university">University</label>
+                                                    <div class="controls">
+                                                        <input type="text" class="form-control" id="university">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label" for="doctorImage">Profile Image</label>
+                                                    <img class="img-responsive" src="https://via.placeholder.com/150" alt="" style="max-width:120px;">
+                                                    <div class="controls">
+                                                        <input type="file" class="form-control" id="doctorImage">
                                                     </div>
                                                 </div>
                                             </div>
-
+                
                                             <div class="col-xs-12 padding-bottom-30">
                                                 <div class="text-left">
-                                                    <button type="button" class="btn btn-primary gradient-blue">Save</button>
+                                                    <button type="submit" class="btn btn-primary gradient-blue" >Save</button>
                                                     <button type="button" class="btn">Cancel</button>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
-
                                 </div>
                             </section>
                         </div>
-                        <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-                            <section class="box ">
-                                <header class="panel_header">
-                                    <h2 class="title pull-left">Doctor Account Info</h2>
-                                    <div class="actions panel_actions pull-right">
-                                        <a class="box_toggle fa fa-chevron-down"></a>
-                                        <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
-                                        <a class="box_close fa fa-times"></a>
-                                    </div>
-                                </header>
-                                <div class="content-body">
-                                    <div class="row">
-                                        <form action="#" method="post">
-                                            <div class="col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-1">Email</label>
-                                                    <span class="desc"></span>
-                                                    <div class="controls">
-                                                        <input type="text" class="form-control" value="email@example.com" id="field-3">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-2">Phone</label>
-                                                    <span class="desc">e.g. "(534) 253-5353"</span>
-                                                    <div class="controls">
-                                                        <input type="text" class="form-control" id="field-2" data-mask="phone" placeholder="(999) 999-9999" value="(123) 456-7878">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-2">Password</label>
-                                                    <span class="desc"></span>
-                                                    <div class="controls">
-                                                        <input type="password" value="" class="form-control" id="field-2">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-2">Confirm Password</label>
-                                                    <span class="desc"></span>
-                                                    <div class="controls">
-                                                        <input type="password" value="" class="form-control" id="field-21">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-xs-12 padding-bottom-30">
-                                                <div class="text-left">
-                                                    <button type="button" class="btn btn-primary gradient-blue">Save</button>
-                                                    <button type="button" class="btn">Cancel</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </section>
-                        </div>
-
-                        <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-                            <section class="box ">
-                                <header class="panel_header">
-                                    <h2 class="title pull-left">Doctor Social Media Info</h2>
-                                    <div class="actions panel_actions pull-right">
-                                        <a class="box_toggle fa fa-chevron-down"></a>
-                                        <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
-                                        <a class="box_close fa fa-times"></a>
-                                    </div>
-                                </header>
-                                <div class="content-body">
-                                    <div class="row">
-                                        <form action="#" method="post">
-                                            <div class="col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-1">Facebook URL</label>
-                                                    <span class="desc"></span>
-                                                    <div class="controls">
-                                                        <input type="text" class="form-control" value="http://www.facebook.com/userID" id="field-31">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-1">Twitter URL</label>
-                                                    <span class="desc"></span>
-                                                    <div class="controls">
-                                                        <input type="text" class="form-control" value="http://www.twitter.com/userID" id="field-41">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label" for="field-1">Google Plus URL</label>
-                                                    <span class="desc"></span>
-                                                    <div class="controls">
-                                                        <input type="text" class="form-control" value="http://www.plus.google.com/userID" id="field-51">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 padding-bottom-30">
-                                                <div class="text-left">
-                                                    <button type="button" class="btn btn-primary gradient-blue">Save</button>
-                                                    <button type="button" class="btn">Cancel</button>
-                                                </div>
-                                            </div>
-
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </section>
-                        </div>
-
-
-
                     </div>
                 </div>
-
                 
+
+                <!-- Modal -->
+                <div id="successModal" class="modal" style="display: none">
+                    <div class="modal-content">
+                        <span class="close" id="closeModal">&times;</span>
+                        <p id="modalMessage">User updated successfully!</p>
+                    </div>
+                </div>
 
                 
         <!-- MAIN CONTENT AREA ENDS -->
@@ -960,7 +1036,7 @@
     <!-- CORE TEMPLATE JS - START -->
     <script src="../assets/js/scripts.js"></script>
     <!-- END CORE TEMPLATE JS - END -->
-
+    <script src="../assets/js/GetDoctors.js"></script>
 </body>
 
 

@@ -51,34 +51,49 @@ namespace MasterPeiceBackEnd.Controllers
             return Ok(data);
         }
         [HttpPut("UpdateDoctor/{id:int}")]
-        public IActionResult UpdateDoctor(int id , [FromForm] UpdateDoctorDTO doctor)
+        public IActionResult UpdateDoctor(int id, [FromForm] UpdateDoctorDTO doctor)
         {
             var data = _db.Doctors.Find(id);
 
-            if (doctor.Name != null)
+            if (data == null)
+            {
+                return NotFound($"Doctor with ID {id} not found."); // Handle the case where the doctor does not exist
+            }
+
+            // Update properties only if they are provided
+            if (!string.IsNullOrEmpty(doctor.Name))
                 data.Name = doctor.Name;
-            if (doctor?.SpecialtyId != null)
+
+            if (doctor.SpecialtyId != 0) // Assuming 0 is not a valid SpecialtyId
                 data.SpecialtyId = doctor.SpecialtyId;
-            if (doctor?.Phone != null)
+
+            if (!string.IsNullOrEmpty(doctor.Phone))
                 data.Phone = doctor.Phone;
-            if (doctor?.UserId != null)
+
+            if (doctor.UserId != 0) // Assuming 0 is not a valid UserId
                 data.UserId = doctor.UserId;
-            if (doctor?.Email != null)
+
+            if (!string.IsNullOrEmpty(doctor.Email))
                 data.Email = doctor.Email;
-            if (doctor?.Description != null)
+
+            if (!string.IsNullOrEmpty(doctor.Description))
                 data.Description = doctor.Description;
-            if (doctor?.DoctorImage != null)
-                data.DoctorImage = SaveImage( doctor.DoctorImage);
-            if (doctor?.Degree != null)
+
+            if (doctor.DoctorImage != null)
+                data.DoctorImage = SaveImage(doctor.DoctorImage); // Ensure SaveImage method handles nulls
+
+            if (!string.IsNullOrEmpty(doctor.Degree))
                 data.Degree = doctor.Degree;
-            if (doctor?.University != null)
+
+            if (!string.IsNullOrEmpty(doctor.University))
                 data.University = doctor.University;
 
-            var request = _db.Doctors.Update(data);
+            _db.Doctors.Update(data);
             _db.SaveChanges();
-            return Ok(data);
 
+            return Ok(data);
         }
+
         [HttpGet("/Api/Products/GetDoctorsBySpecialtyId/{id}")]
         public IActionResult GetAction(int id)
         {
@@ -94,8 +109,8 @@ namespace MasterPeiceBackEnd.Controllers
             }
 
             var doctors = _db.Doctors
-                .Include(d => d.Specialty) // Eager load the Specialty
-                .Where(d => d.SpecialtyId == specialty.SpecialtyId) // Filter by SpecialtyId
+                .Include(d => d.Specialty) 
+                .Where(d => d.SpecialtyId == specialty.SpecialtyId) 
                 .Select(d => new
                 {
                     d.DoctorId,
@@ -107,9 +122,9 @@ namespace MasterPeiceBackEnd.Controllers
                     d.Phone,
                     d.Availability,
                     d.DoctorImage,
-                    SpecialtyName = d.Specialty.Name // Select the specialty name
+                    SpecialtyName = d.Specialty.Name 
                 })
-                .ToList(); // Execute the query
+                .ToList();
 
             if (doctors.Any())
             {
@@ -148,9 +163,9 @@ namespace MasterPeiceBackEnd.Controllers
                     d.DoctorImage,
                     d.University,
                     d.Degree,
-                    SpecialtyName = d.Specialty.Name // Select the specialty name
+                    SpecialtyName = d.Specialty.Name 
                 })
-                .ToList(); // Execute the query
+                .ToList(); 
 
             if (doctors.Any())
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PYeuPohGCds=",
+  "dgSpecHash": "k87fxYwWZrM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj",
+  "projectFilePath": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orange\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

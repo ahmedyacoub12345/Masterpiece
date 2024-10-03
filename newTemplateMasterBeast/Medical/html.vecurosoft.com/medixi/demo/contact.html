@@ -419,18 +419,17 @@
               method="POST"
               class="ajax-contact form-wrap3 mb-30"
               data-bg-color="#f3f6f7"
+              id="contact-form"
             >
               <div class="form-title">
                 <h3 class="mt-n2 fls-n2 mb-0">Send Us a Message</h3>
-                <p class="text-theme mb-4">
-                  Your email address will not be published*
-                </p>
               </div>
+              <br />
               <div class="form-group mb-15">
                 <input
                   type="text"
                   class="form-control style3"
-                  name="name"
+                  name="Name"
                   id="name"
                   placeholder="Name"
                 />
@@ -440,7 +439,7 @@
                 <input
                   type="text"
                   class="form-control style3"
-                  name="email"
+                  name="Email"
                   id="email"
                   placeholder="E-mail"
                 />
@@ -448,7 +447,7 @@
               </div>
               <div class="form-group mb-15">
                 <textarea
-                  name="message"
+                  name="Message"
                   id="message"
                   cols="30"
                   rows="3"
@@ -458,7 +457,11 @@
                 <i class="fal fa-pencil-alt"></i>
               </div>
               <div class="form-btn pt-15">
-                <button class="vs-btn style2">
+                <button
+                  class="vs-btn style2"
+                  type="submit"
+                  onclick="sendMessage()"
+                >
                   Send Message<i class="fas fa-chevron-right"></i>
                 </button>
               </div>
@@ -700,6 +703,7 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/Contact.js"></script>
   </body>
 
   <!-- Mirrored from html.vecurosoft.com/medixi/demo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Sep 2024 13:49:19 GMT -->

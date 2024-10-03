@@ -38,7 +38,7 @@ async function verifyOtp() {
 
   if (userResponse.ok) {
     const user = await userResponse.json();
-    const userId = user.userId;
+    const userId = user.userID;
     const otp = user.password;
 
     document.getElementById("passwordForm").style.display = "block";
@@ -67,10 +67,10 @@ async function changePassword() {
         },
       }
     );
-
+    debugger;
     if (userResponse.ok) {
       const user = await userResponse.json();
-      const userId = user.userId;
+      const userId = user.userID;
 
       const passwordResponse = await fetch(
         `https://localhost:44364/api/Users/ChangePassword/${userId}`,

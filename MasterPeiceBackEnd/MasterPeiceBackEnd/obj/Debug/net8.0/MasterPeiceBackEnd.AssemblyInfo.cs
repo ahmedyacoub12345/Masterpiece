@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MasterPeiceBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2304853425e8cb6505a438f293f87cd73708a234")]
 [assembly: System.Reflection.AssemblyProductAttribute("MasterPeiceBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MasterPeiceBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

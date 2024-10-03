@@ -49,6 +49,37 @@ namespace MasterPeiceBackEnd.Migrations
                     b.ToTable("Availabilities");
                 });
 
+            modelBuilder.Entity("MasterPeiceBackEnd.Models.ContactUs", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("MessageID");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("SubmittedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.HasKey("MessageId")
+                        .HasName("PK__ContactU__C87C037CAC1E4233");
+
+                    b.ToTable("contactUs");
+                });
+
             modelBuilder.Entity("MasterPieceBackEnd.Model.Admin", b =>
                 {
                     b.Property<int>("AdminId")

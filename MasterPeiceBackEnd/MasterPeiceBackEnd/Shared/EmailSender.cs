@@ -9,12 +9,12 @@ namespace MasterPeiceBackEnd.Shared
         {
             try
             {
-                const string fromAddress = "ymankh1997@gmail.com";
+                const string fromAddress = "jordainianelection@gmail.com";
 
                 // Set up the Gmail SMTP client with the app password
                 var smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
-                    Credentials = new NetworkCredential("ymankh1997@gmail.com", "xfru fxax xada hsws"), // Use your app password here
+                    Credentials = new NetworkCredential("jordainianelection@gmail.com", "wsvl ilbd hdqd ooap"), // Use your app password here
                     EnableSsl = true
                 };
 

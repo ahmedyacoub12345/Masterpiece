@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj": {}
+    "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj": {
+    "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj",
         "projectName": "MasterPeiceBackEnd",
-        "projectPath": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj",
+        "projectPath": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\MasterPeiceBackEnd.csproj",
         "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orange\\Desktop\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\obj\\",
+        "outputPath": "C:\\Users\\Orange\\Desktop\\Masterpiece\\MasterPeiceBackEnd\\MasterPeiceBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

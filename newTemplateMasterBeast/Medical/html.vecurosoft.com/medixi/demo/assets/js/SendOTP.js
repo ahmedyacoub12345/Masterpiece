@@ -68,10 +68,10 @@ document
         `https://localhost:44364/api/Users/GetUserByEmail/${email}`
       );
       const user = await userResponse.json();
-
+      console.log(user);
       if (user) {
         const response = await fetch(
-          `https://localhost:44364/api/Users/ChangePassword/${user.UserId}`,
+          `https://localhost:44364/api/Users/ChangePassword/${user.userID}`,
           {
             method: "PUT",
             headers: {

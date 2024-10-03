@@ -43,7 +43,117 @@
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- CORE CSS TEMPLATE - END -->
+     <!-- Favicon -->
+    <link
+    rel="shortcut icon"
+    href="../assets/images/favicon.png"
+    type="image/x-icon"
+  />
+  <!-- For iPhone -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    href="../assets/images/apple-touch-icon-57-precomposed.png"
+  />
+  <!-- For iPhone 4 Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="114x114"
+    href="../assets/images/apple-touch-icon-114-precomposed.png"
+  />
+  <!-- For iPad -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="72x72"
+    href="../assets/images/apple-touch-icon-72-precomposed.png"
+  />
+  <!-- For iPad Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="144x144"
+    href="../assets/images/apple-touch-icon-144-precomposed.png"
+  />
 
+  <!-- CORE CSS FRAMEWORK - START -->
+  <link
+    href="../assets/plugins/pace/pace-theme-flash.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/font-awesome/css/font-awesome.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/webfont/cryptocoins.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/css/animate.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS FRAMEWORK - END -->
+
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+  <link
+    href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/morris-chart/css/morris.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/calendar/fullcalendar.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/icheck/skins/minimal/minimal.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+  <!-- CORE CSS TEMPLATE - START -->
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link
+    href="../assets/css/responsive.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS TEMPLATE - END -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <!-- END HEAD -->
 
@@ -528,7 +638,7 @@
 
         <!-- START CONTENT -->
         <section id="main-content" class=" ">
-            <div class="wrapper main-wrapper row" style=''>
+            <div class="wrapper main-wrapper row" >
 
                 <div class='col-xs-12'>
                     <div class="page-title">
@@ -545,8 +655,8 @@
                 <div class="clearfix"></div>
                 <!-- MAIN CONTENT AREA STARTS -->
 
-                <div class="col-lg-4">
-                    <section class="box ">
+                <div class="col-lg-4" id="PatientDetails">
+                     <!-- <section class="box ">
                         <div class="content-body p">
                             <div class="row">
                                 <div class="doctors-list patient relative">
@@ -601,7 +711,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div><!-- end row -->
+                                    </div>
                                     
                                     <div class="col-xs-12 mb-30">
                                         <div class="reminder-wrapper has-shadow2">
@@ -620,7 +730,7 @@
                                
                             </div>
                         </div>
-                    </section>
+                    </section>  -->
                 </div>
 
                 <div class="col-lg-8 col-md-12">
@@ -1072,6 +1182,7 @@
     <!-- CORE TEMPLATE JS - START -->
     <script src="../assets/js/scripts.js"></script>
     <!-- END CORE TEMPLATE JS - END -->
+     <script src="../assets/js/GetPatients.js"></script>
 
 </body>
 

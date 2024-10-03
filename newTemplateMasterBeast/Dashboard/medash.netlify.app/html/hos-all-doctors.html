@@ -43,6 +43,117 @@
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- CORE CSS TEMPLATE - END -->
+     <!-- Favicon -->
+    <link
+    rel="shortcut icon"
+    href="../assets/images/favicon.png"
+    type="image/x-icon"
+  />
+  <!-- For iPhone -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    href="../assets/images/apple-touch-icon-57-precomposed.png"
+  />
+  <!-- For iPhone 4 Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="114x114"
+    href="../assets/images/apple-touch-icon-114-precomposed.png"
+  />
+  <!-- For iPad -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="72x72"
+    href="../assets/images/apple-touch-icon-72-precomposed.png"
+  />
+  <!-- For iPad Retina display -->
+  <link
+    rel="apple-touch-icon-precomposed"
+    sizes="144x144"
+    href="../assets/images/apple-touch-icon-144-precomposed.png"
+  />
+
+  <!-- CORE CSS FRAMEWORK - START -->
+  <link
+    href="../assets/plugins/pace/pace-theme-flash.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/font-awesome/css/font-awesome.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/fonts/webfont/cryptocoins.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/css/animate.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS FRAMEWORK - END -->
+
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+  <link
+    href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/morris-chart/css/morris.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/calendar/fullcalendar.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <link
+    href="../assets/plugins/icheck/skins/minimal/minimal.css"
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+  />
+  <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+  <!-- CORE CSS TEMPLATE - START -->
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link
+    href="../assets/css/responsive.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- CORE CSS TEMPLATE - END -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <!-- END HEAD -->
@@ -528,7 +639,7 @@
 
         <!-- START CONTENT -->
         <section id="main-content" class=" ">
-            <div class="wrapper main-wrapper row" style=''>
+            <div class="wrapper main-wrapper row" >
 
                 <div class='col-xs-12'>
                     <div class="page-title">
@@ -542,10 +653,10 @@
                     </div>
                 </div>
 
-                <div class="clearfix"></div>
+                <div class="clearfix" id="AllDoctors"></div>
                 <!-- MAIN CONTENT AREA STARTS -->
 
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <section class="box ">
                         <div class="content-body p">
                             <div class="row">
@@ -606,7 +717,7 @@
                                             </div>
                                             
                                         </div>
-                                    </div><!-- end row -->
+                                    </div>
                                     
                                     <div class="col-xs-12 mb-30">
                                         <div class="form-group no-mb">
@@ -617,385 +728,10 @@
                             </div>
                         </div>
                     </section>
-                </div>
+                </div> -->
 
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="doctor-card has-shadow">
-                                            <div class="doc-info-wrap text-left">
-                                                <div class="doctor-img">
-                                                    <img src="../data/hos-dash/doc2.jpg" alt="">
-                                                </div>
-                                                <div class="doc-info">
-                                                    <h4 class="bold">Brooks Latshaw</h4>
-                                                    <h5>Surgeon</h5>
-                                                    <div class="doc-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>4.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-4 col-xs-12 no-padding-right">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">3542</h5>
-                                                            <h6>Patient</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 pl-7 pr-7">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">45 yrs</h5>
-                                                            <h6>Doc age</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 no-padding-left">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">4563</h5>
-                                                            <h6>Points</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <a href="hos-staff-profile.html" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                
 
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="doctor-card has-shadow">
-                                            <div class="doc-info-wrap text-left">
-                                                <div class="doctor-img">
-                                                    <img src="../data/hos-dash/doc3.jpg" alt="">
-                                                </div>
-                                                <div class="doc-info">
-                                                    <h4 class="bold">Cletina Brodeur</h4>
-                                                    <h5>Cardiologist</h5>
-                                                    <div class="doc-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half"></i>
-                                                        <span>4.1</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-4 col-xs-12 no-padding-right">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">2202</h5>
-                                                            <h6>Patient</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 pl-7 pr-7">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">34 yrs</h5>
-                                                            <h6>Doc age</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 no-padding-left">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">4539</h5>
-                                                            <h6>Points</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <a href="hos-staff-profile.html" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="doctor-card has-shadow">
-                                            <div class="doc-info-wrap text-left">
-                                                <div class="doctor-img">
-                                                    <img src="../data/hos-dash/doc1.jpg" alt="">
-                                                </div>
-                                                <div class="doc-info">
-                                                    <h4 class="bold">Smith Wright</h4>
-                                                    <h5>Clinical Doctor</h5>
-                                                    <div class="doc-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>4.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-4 col-xs-12 no-padding-right">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">1202</h5>
-                                                            <h6>Patient</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 pl-7 pr-7">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">29 yrs</h5>
-                                                            <h6>Doc age</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 no-padding-left">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">2259</h5>
-                                                            <h6>Points</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <a href="hos-staff-profile.html" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="doctor-card has-shadow">
-                                            <div class="doc-info-wrap text-left">
-                                                <div class="doctor-img">
-                                                    <img src="../data/hos-dash/doc1.jpg" alt="">
-                                                </div>
-                                                <div class="doc-info">
-                                                    <h4 class="bold">Smith Wright</h4>
-                                                    <h5>Clinical Doctor</h5>
-                                                    <div class="doc-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>4.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-4 col-xs-12 no-padding-right">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">1202</h5>
-                                                            <h6>Patient</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 pl-7 pr-7">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">29 yrs</h5>
-                                                            <h6>Doc age</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 no-padding-left">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">2259</h5>
-                                                            <h6>Points</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <a href="hos-staff-profile.html" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="doctor-card has-shadow">
-                                            <div class="doc-info-wrap text-left">
-                                                <div class="doctor-img">
-                                                    <img src="../data/hos-dash/doc1.jpg" alt="">
-                                                </div>
-                                                <div class="doc-info">
-                                                    <h4 class="bold">Smith Wright</h4>
-                                                    <h5>Clinical Doctor</h5>
-                                                    <div class="doc-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <span>4.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-4 col-xs-12 no-padding-right">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">1202</h5>
-                                                            <h6>Patient</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 pl-7 pr-7">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">29 yrs</h5>
-                                                            <h6>Doc age</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 col-xs-12 no-padding-left">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">2259</h5>
-                                                            <h6>Points</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <a href="hos-staff-profile.html" class="btn btn-primary btn-lg gradient-blue" style="width:100%"> View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="col-xs-12 mb-30 mt-15">
-                    <div class="form-group no-mb text-center">
-                        <button type="button" class="btn btn-primary btn-lg gradient-blue" style="width:100%;max-width:300px"> Load more</button>
-                    </div>
-                </div>
 
             
                 
@@ -1197,7 +933,7 @@
     <!-- CORE TEMPLATE JS - START -->
     <script src="../assets/js/scripts.js"></script>
     <!-- END CORE TEMPLATE JS - END -->
-
+    <script src="../assets/js/GetDoctors.js"></script>
 </body>
 
 

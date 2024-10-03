@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Reflection.Emit;
 using MasterPeiceBackEnd.Models;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +44,8 @@ public partial class MedicalAppContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
     public DbSet<Availability> Availabilities { get; set; }
+    public DbSet<ContactUs> contactUs { get; set; }
+
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -222,6 +225,17 @@ public partial class MedicalAppContext : DbContext
           .HasForeignKey(a => a.DoctorId)
           .OnDelete(DeleteBehavior.Cascade);
 
+        modelBuilder.Entity<ContactUs>(entity =>
+        {
+            entity.HasKey(e => e.MessageId).HasName("PK__ContactU__C87C037CAC1E4233");
+
+            entity.Property(e => e.MessageId).HasColumnName("MessageID");
+            entity.Property(e => e.Email).HasMaxLength(100);
+            entity.Property(e => e.Name).HasMaxLength(100);
+            entity.Property(e => e.SubmittedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+        });
 
         OnModelCreatingPartial(modelBuilder);
     }
