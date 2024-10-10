@@ -1,8 +1,10 @@
 ﻿using MasterPeiceBackEnd.DTOs;
+using MasterPieceBackEnd.DTOs;
 using MasterPieceBackEnd.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PayPal.Api;
 using static MasterPeiceBackEnd.Shared.ImageSaver;
 
 namespace MasterPeiceBackEnd.Controllers
@@ -12,9 +14,14 @@ namespace MasterPeiceBackEnd.Controllers
     public class DoctorsController : ControllerBase
     {
         private readonly MedicalAppContext _db;
-        public DoctorsController(MedicalAppContext db)
+        private readonly TokenGenerator _tokenGenerator;
+        private readonly MasterPeiceBackEnd.TokenReaderNS.TokenReader _tokenReader;
+
+        public DoctorsController(MedicalAppContext db, TokenGenerator tokenGenerator, MasterPeiceBackEnd.TokenReaderNS.TokenReader tokenReader)
         {
             _db = db;
+            _tokenGenerator = tokenGenerator;
+            _tokenReader = tokenReader;
         }
         [HttpGet("GetAllDoctors")]
         public IActionResult GetAllDoctors()
@@ -31,6 +38,10 @@ namespace MasterPeiceBackEnd.Controllers
         [HttpPost("AddNewDoctor")]
         public IActionResult AddDoctor([FromForm] DoctorDTO doctor)
         {
+            byte[] hash;
+            byte[] salt;
+            PasswordHash.Hasher(doctor.Password, out hash, out salt);
+
             var data = new Doctor
             {
                 Name = doctor.Name,
@@ -42,9 +53,12 @@ namespace MasterPeiceBackEnd.Controllers
                 UserId = doctor.UserId,
                 DoctorImage = SaveImage(doctor.DoctorImage),
                 Email= doctor.Email,
+                Password=doctor.Password,
                 Description= doctor.Description,
                 Degree = doctor.Degree,
                 University = doctor.University,
+                PasswordHash = hash,
+                PasswordSalt = salt,
             };
             var request = _db.Doctors.Add(data);
             _db.SaveChanges();
@@ -174,7 +188,41 @@ namespace MasterPeiceBackEnd.Controllers
 
             return NotFound();
         }
+        [HttpPut("ChangePassword/{id:int}")]
+        public IActionResult ChangePassword(int id, [FromBody] ChangePasswordDTO doctor)
+        {
+            byte[] hash;
+            byte[] salt;
+            PasswordHash.Hasher(doctor.Password, out hash, out salt);
+            var data = _db.Doctors.Find(id);
+            if (data == null)
+                return NotFound();
+            data.Password = doctor.Password;
+            data.PasswordHash = hash;
+            data.PasswordSalt = salt;
+            _db.Doctors.Update(data);
+            _db.SaveChanges();
+            return Ok(doctor);
+        }
+        [HttpPost("LoginDoctors")]
+        public IActionResult Login([FromForm] DoctorLoginDTO doctor)
+        {
+            var data = _db.Doctors.FirstOrDefault(x => x.Email == doctor.Email);
+            if (data == null || !PasswordHash.verifyPassword(doctor.Password, data.PasswordHash, data.PasswordSalt))
+            {
+                return Unauthorized();
+            }
 
+            var token = _tokenGenerator.GenerateToken(data.Name);
+
+            var response = new
+            {
+                Token = token,
+                Doctor = data
+            };
+
+            return Ok(response);
+        }
 
     }
 }

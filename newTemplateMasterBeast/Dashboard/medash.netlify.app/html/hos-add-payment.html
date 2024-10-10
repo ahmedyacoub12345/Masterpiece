@@ -469,7 +469,7 @@
                                 </a>
                             </li>
                             <li class="last">
-                                <a href='ui-login.html'>
+                                <a href='ui-login.html' onclick="ClearLocalStorage(event)">
                                     <i class="fa fa-lock"></i> Logout
                                 </a>
                             </li>
@@ -585,7 +585,26 @@
                             </li>
                         </ul>
                     </li>
-                    
+                    <li id="Blog" class="active dropdown">
+                        <a
+                          href="javascript:void(0);"
+                          data-toggle="collapse"
+                          data-target="#blogDropdown"
+                        >
+                          <i class="img">
+                            <img
+                              src="../data/hos-dash/icons/4.png"
+                              alt=""
+                              class="width-20"
+                            />
+                          </i>
+                          <span class="title">Blogs</span>
+                          <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu collapse " id="blogDropdown">
+                          <li><a href="hos-Blogs.html">Add Blog</a></li>
+                        </ul>
+                      </li>
                     
                     <li class="">
                         <a href="javascript:;">

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Purchase DORNO book with secure payment options."
+    />
+    <title>Buy DORNO Book - MyProgrammingBook</title>
+    <link rel="stylesheet" type="text/css" href="paypal.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .product-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .product-image-container {
+        flex: 1;
+        max-width: 400px;
+        margin-right: 20px;
+      }
+
+      .product-image-container img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-info-container {
+        flex: 2;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-top: 0;
+        color: #333;
+      }
+
+      .price {
+        color: #ff5722;
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .product-description {
+        font-size: 1em;
+        color: #666;
+        line-height: 1.6;
+        margin: 20px 0;
+      }
+
+      .terms {
+        font-size: 0.9em;
+        color: #999;
+      }
+
+      button {
+        background-color: #ff5722;
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        margin: 10px 0;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e64a19;
+      }
+
+      #paypal-button-container {
+        margin-top: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #fff;
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to MyProgrammingBook</h1>
+    </header>
+    <div class="product-container">
+      <div class="product-image-container">
+        <img
+          src="../dorno/assets/img/about/imagepay.png"
+          alt="Cover image of DORNO Book"
+        />
+      </div>
+      <div class="product-info-container">
+        <h1>DORNO Book</h1>
+        <p class="price" id="amount"></p>
+        <p class="product-description">
+          At DoRNO, we prioritize your convenience and security, ensuring that
+          your shopping experience is smooth from start to finish. Our payment
+          system is designed to provide you with a range of secure and flexible
+          options, allowing you to choose the method that best suits your needs.
+        </p>
+        <p class="terms">*Terms and Conditions Apply</p>
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 MyProgrammingBook. All rights reserved.</p>
+    </footer>
+
+    <!-- Include PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Adtb6XkpqqndM80PndrUC19_b7NqNe4BDiNI5b3beOJWq1bUyoPk4QQABWoxFInvtrj3PPuvcU0X24p8&currency=USD"></script>
+
+    <script>
+      // Get values from localStorage
+      const amount = localStorage.getItem("amountForPay") || "25"; // Default value in case localStorage is empty
+      const userId = localStorage.getItem("userId") || "1"; // Fallback value
+      const doctorId = localStorage.getItem("DoctorId") || "1"; // Fallback value
+      const appointmentTime =
+        localStorage.getItem("AppointmentTime") || "12:00";
+      const appointmentDate =
+        localStorage.getItem("BookingDate") || "2024-12-01";
+
+      // Display the amount on the page
+      document.getElementById("amount").innerHTML = `$${amount}`;
+
+      // Initialize PayPal button
+      function initPayPalButton() {
+        paypal
+          .Buttons({
+            style: {
+              shape: "rect",
+              color: "gold",
+              layout: "vertical",
+              label: "paypal",
+            },
+
+            // Create an order when the user clicks the button
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [
+                  {
+                    amount: {
+                      currency_code: "USD",
+                      value: amount,
+                    },
+                  },
+                ],
+              });
+            },
+
+            // On successful payment
+            onApprove: async function (data, actions) {
+              try {
+                const orderData = await actions.order.capture();
+                console.log("Payment Successful!", orderData);
+
+                // Send payment data to your server
+                const paymentData = {
+                  UserId: parseInt(userId),
+                  Amount: parseFloat(amount),
+                };
+
+                const paymentResponse = await fetch(
+                  "https://localhost:44364/api/Payment/create-payment",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(paymentData),
+                  }
+                );
+
+                if (!paymentResponse.ok) {
+                  throw new Error("Payment creation failed");
+                }
+
+                const paymentResult = await paymentResponse.json();
+                console.log("Payment saved successfully", paymentResult);
+
+                const today = new Date();
+                const formattedDate = today.toISOString().split("T")[0];
+
+                // After payment, book the appointment
+                const bookingData = {
+                  UserId: parseInt(userId),
+                  DoctorId: parseInt(doctorId),
+                  Time: appointmentTime,
+                  Date: formattedDate,
+                  PaymentStatus: "Approved",
+                };
+                debugger;
+                const bookingResponse = await fetch(
+                  "https://localhost:44364/api/Booking/BookAppointment",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(bookingData),
+                  }
+                );
+
+                if (!bookingResponse.ok) {
+                  throw new Error("Booking creation failed");
+                }
+
+                const bookingResult = await bookingResponse.json();
+                console.log("Booking saved successfully", bookingResult);
+
+                // Show success message
+                const element = document.getElementById(
+                  "paypal-button-container"
+                );
+                element.innerHTML =
+                  "<h3>Thank you for your payment and appointment booking!</h3>";
+
+                // Redirect after 3 seconds
+                setTimeout(function () {
+                  window.location.href = "index-3.html";
+                }, 3000);
+              } catch (error) {
+                console.error("Error:", error);
+                alert(
+                  "There was an error processing your payment or booking. Please try again."
+                );
+              }
+            },
+
+            onError: function (err) {
+              console.error("PayPal Error:", err);
+              alert("There was an error with PayPal. Please try again later.");
+            },
+          })
+          .render("#paypal-button-container");
+      }
+
+      window.onload = initPayPalButton;
+    </script>
+  </body>
+</html>

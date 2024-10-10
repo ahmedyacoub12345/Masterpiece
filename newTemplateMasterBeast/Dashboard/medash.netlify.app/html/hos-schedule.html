@@ -154,6 +154,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <!-- END HEAD -->
 
@@ -488,168 +490,153 @@
         <!-- SIDEBAR - START -->
 
         <div class="page-sidebar fixedscroll">
-
             <!-- MAIN MENU - START -->
             <div class="page-sidebar-wrapper" id="main-menu-wrapper">
-
-                <ul class='wraplist'>
-                    <li class='menusection'>Main</li>
-                    <li class="">
-                        <a href='index-hos-dashboard.html'>
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/1.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Dashboard</span>
-                        </a>
+              <ul class="wraplist">
+                <li class="menusection">Main</li>
+                <li class="open">
+                  <a href="index-hos-dashboard.html">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/1.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Dashboard</span>
+                  </a>
+                </li>
+    
+                <li class="" id="DoctorLi">
+                  <a href="javascript:;">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/2.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Doctors</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a class href="hos-all-doctors.html">All Doctors</a>
                     </li>
-                    
-                    <li class="">
-                        <a href="javascript:;">
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/2.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Doctors</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class href='hos-all-doctors.html'>All Doctors</a>
-                            </li>
-                            <li>
-                                <a class href='hos-add-doctor.html'>Add Doctor</a>
-                            </li>
-                            <li>
-                                <a class href='hos-edit-doctor.html'>Edit Doctor</a>
-                            </li>
-                            <li>
-                                <a class href='hos-doctor-profile.html'>Doctor Profile</a>
-                            </li>
-                        </ul>
+                    <li>
+                      <a class href="hos-add-doctor.html">Add Doctor</a>
                     </li>
-                    <li class="">
-                        <a href="javascript:;">
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/5.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Patients</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class href='hos-all-patients.html'>All Patients</a>
-                            </li>
-                            <li>
-                                <a class href='hos-add-patient.html'>Add Patient</a>
-                            </li>
-                            <li>
-                                <a class href='hos-edit-patient.html'>Edit Patient</a>
-                            </li>
-                            <li>
-                                <a class href='hos-patient-profile.html'>Patient Profile</a>
-                            </li>
-                        </ul>
                     </li>
-                    <li class="open">
-                        <a href="javascript:;">
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/6.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Appointments</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class='active' href='hos-schedule.html'>Doctor Schedule</a>
-                            </li>
-                            <li>
-                                <a class href='hos-book-appointment.html'>Book Appointment</a>
-                            </li>
-                        </ul>
+                  </ul>
+                </li>
+                <li class="">
+                  <a href="javascript:;">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/5.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Patients</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a class href="hos-all-patients.html">All Patients</a>
                     </li>
-                    <li class="">
-                        <a href="javascript:;">
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/7.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Billing</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class href='hos-payment.html'>Payments</a>
-                            </li>
-                            <li>
-                                <a class href='hos-add-payment.html'>Add Payment</a>
-                            </li>
-                            <li>
-                                <a class href='hos-patient-invoice.html'>Patient Invoice</a>
-                            </li>
-                        </ul>
+                  </ul>
+                </li>
+                <li class="" id="Appointment">
+                  <a href="javascript:;">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/6.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Appointments</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a class href="hos-schedule.html">Doctor Schedule</a>
                     </li>
-                    
-                    
-                    <li class="">
-                        <a href="javascript:;">
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/10.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Access Pages</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class href='ui-login.html'>Login</a>
-                            </li>
-                            <li>
-                                <a class href='ui-register.html'>Registration</a>
-                            </li>
-                            <li>
-                                <a class href='ui-404.html'>404</a>
-                            </li>
-                        </ul>
+                  </ul>
+                </li>
+                <li class="">
+                  <a href="javascript:;">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/7.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Billing</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a class href="hos-payment.html">Payments</a>
                     </li>
-                    <li class="">
-                        <a href="javascript:;">
-                            <i class="img">
-                                <img src="../data/hos-dash/icons/11.png" alt="" class="width-20">
-                            </i>
-                            <span class="title">Support</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a class href='hos-faq.html'>FAQ</a>
-                            </li>
-                            <li>
-                                <a class href='hos-support.html'>Help center</a>
-                            </li>
-                        </ul>
+                  </ul>
+                </li>
+    
+                <li class="">
+                  <a href="javascript:;">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/10.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Access Pages</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a class href="ui-login.html">Login</a>
                     </li>
-                    
-                        </ul>
+                  </ul>
+                </li>
+                <li class="">
+                  <a href="javascript:;">
+                    <i class="img">
+                      <img
+                        src="../data/hos-dash/icons/11.png"
+                        alt=""
+                        class="width-20"
+                      />
+                    </i>
+                    <span class="title">Support</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a class href="hos-faq.html">FAQ</a>
                     </li>
-
-                </ul>
-
+                    <li>
+                      <a class href="hos-support.html">Help center</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <!-- MAIN MENU - END -->
-
-        </div>
+          </div>
         <!--  SIDEBAR - END -->
 
         <!-- START CONTENT -->
-        <section id="main-content" class="">
-            <div class="wrapper main-wrapper row" style="">
-
+        <section id="main-content">
+            <div class="wrapper main-wrapper row">
                 <div class="col-xs-12">
                     <div class="page-title">
-
                         <div class="pull-left">
-                            <!-- PAGE HEADING TAG - START -->
                             <h1 class="title">DOCTOR SCHEDULE</h1>
-                            <!-- PAGE HEADING TAG - END -->
                         </div>
-
                         <div class="pull-right hidden-xs">
                             <ol class="breadcrumb">
                                 <li>
@@ -660,54 +647,49 @@
                                 </li>
                             </ol>
                         </div>
-
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <!-- MAIN CONTENT AREA STARTS -->
-
-                <div class="col-xs-12 ">
-                   
-                    <div class="col-lg-12">
-                        <section class="box nobox ">
+                <div class="col-xs-12">
+                    <div class="col-12">
+                        <section class="box nobox">
                             <div class="content-body">
                                 <div class="row">
-                                    <div class="col-xs-12 col-md-2">
-
-                                        <form method="post" id="add_event_form">
-                                            <input type="text" class="form-control new-event-form" placeholder="Add new event..." />
+                                    <div class="col-12">
+                                        <form method="post" id="add_event_form" enctype="multipart/form-data" style="width: 90%; margin: 0 auto; direction: ltr;">
+                                            <div class="form-group">
+                                                <label for="doctorId">Doctor ID</label>
+                                                <input type="number" id="DoctorId" name="DoctorId" class="form-control" placeholder="Enter Doctor ID" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="date">Date</label>
+                                                <input type="date" name="Date" class="form-control" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="startTime">Start Time</label>
+                                                <input type="time" name="StartTime" class="form-control" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="endTime">End Time</label>
+                                                <input type="time" name="EndTime" class="form-control" required />
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Add Availability</button>
                                         </form>
-
-                                        <div id='external-events'>
-                                            <h4>Draggable Events</h4>
-                                            <div class='fc-event bg-purple'>My Event 1</div>
-                                            <div class='fc-event bg-purple'>My Event 2</div>
-                                            <div class='fc-event bg-purple'>My Event 3</div>
-                                            <div class='fc-event bg-purple'>My Event 4</div>
-                                            <div class='fc-event bg-purple'>My Event 5</div>
-                                            <br>
-                                            <label class="form-label" for='drop-remove' style="font-size:13px;">
-                                                <input type="checkbox" id='drop-remove' class="iCheck"> <span>Drop&nbsp;&&nbsp;Remove</span>
-                                            </label>
-
-                                            <h4>Created Events</h4>
-                                        </div>
                                     </div>
-
-                                    <div id='hos-doc-schedule-calendar' class="col-xs-12 col-md-10"></div>
-
                                 </div>
                             </div>
                         </section>
                     </div>
-
-                    
+                    <section class="schedule-display">
+                        <h2 style="text-align: left;">Doctor's Schedule</h2>
+                        <div id="scheduleContainer" style="direction: ltr;">
+                            <!-- Schedule data will be displayed here -->
+                        </div>
+                    </section>
                 </div>
-
-                
-        <!-- MAIN CONTENT AREA ENDS -->
-        </div>
-    </section>
+            </div>
+        </section>
+        
     <!-- END CONTENT -->
     <div class="page-chatapi hideit">
 
@@ -907,6 +889,8 @@
     <!-- CORE TEMPLATE JS - START -->
     <script src="../assets/js/scripts.js"></script>
     <!-- END CORE TEMPLATE JS - END -->
+    <script src="../assets/js/ScheduleDoctor.js"></script>
+    <script src="../assets/js/ChangeNav.js"></script>
 
 </body>
 

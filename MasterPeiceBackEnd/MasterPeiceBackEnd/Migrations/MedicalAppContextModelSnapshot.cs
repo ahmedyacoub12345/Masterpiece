@@ -80,6 +80,52 @@ namespace MasterPeiceBackEnd.Migrations
                     b.ToTable("contactUs");
                 });
 
+            modelBuilder.Entity("MasterPeiceBackEnd.Models.UserPayment", b =>
+                {
+                    b.Property<int>("PaymentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("payment_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentId"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnName("amount");
+
+                    b.Property<DateTime?>("PaymentDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasColumnName("payment_date")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("payment_method");
+
+                    b.Property<string>("PaymentStatus")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("payment_status");
+
+                    b.Property<string>("TransactionId")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("transaction_id");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("PaymentId")
+                        .HasName("PK__Payments__ED1FC9EA12D776EF");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Payments");
+                });
+
             modelBuilder.Entity("MasterPieceBackEnd.Model.Admin", b =>
                 {
                     b.Property<int>("AdminId")
@@ -172,6 +218,9 @@ namespace MasterPeiceBackEnd.Migrations
                         .HasColumnName("BlogID");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogId"));
+
+                    b.Property<string>("BlogImage")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -325,6 +374,16 @@ namespace MasterPeiceBackEnd.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -557,6 +616,17 @@ namespace MasterPeiceBackEnd.Migrations
                     b.Navigation("Doctor");
                 });
 
+            modelBuilder.Entity("MasterPeiceBackEnd.Models.UserPayment", b =>
+                {
+                    b.HasOne("MasterPieceBackEnd.Model.User", "User")
+                        .WithMany("Payments")
+                        .HasForeignKey("UserId")
+                        .IsRequired()
+                        .HasConstraintName("FK__Payments__user_i__02084FDA");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("MasterPieceBackEnd.Model.Admin", b =>
                 {
                     b.HasOne("MasterPieceBackEnd.Model.User", "User")
@@ -734,6 +804,8 @@ namespace MasterPeiceBackEnd.Migrations
                     b.Navigation("Diagnoses");
 
                     b.Navigation("Doctors");
+
+                    b.Navigation("Payments");
 
                     b.Navigation("Reviews");
 

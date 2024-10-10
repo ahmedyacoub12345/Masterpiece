@@ -117,6 +117,27 @@
       .shadow-none {
         box-shadow: none !important;
       }
+      .diagnosis-treatment-pair {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 1rem; /* المسافة بين الأزواج */
+      }
+
+      .card {
+        flex: 1;
+        margin-bottom: 0; /* إزالة المسافات السفلية بين البطاقات */
+      }
+
+      .card-body {
+        padding: 0.75rem;
+      }
+
+      .pair-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
     </style>
   </head>
 
@@ -192,7 +213,15 @@
               <a href="contact.html">Contact Us</a>
             </li>
             <li>
-              <a href="SignIn.html">Login & Register</a>
+              <a href="SignIn.html" id="signInssd">Login & Register</a>
+            </li>
+            <li>
+              <a
+                href="SignIn.html"
+                id="Logout"
+                onclick="ClearLocalStorage(event)"
+                >Logout</a
+              >
             </li>
           </ul>
         </div>
@@ -352,6 +381,11 @@
                     <li>
                       <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </li>
+                    <li>
+                      <a href="Profile.html" id="profile" style="display: none">
+                        <i class="fas fa-user"></i>
+                      </a>
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -416,26 +450,21 @@
                         <a href="contact.html">Contact</a>
                       </li>
                       <li>
-                        <a href="SignIn.html">Login & Register</a>
+                        <a href="SignIn.html" id="signInss">Login & Register</a>
+                      </li>
+                      <li>
+                        <a
+                          href="SignIn.html"
+                          id="Logout1"
+                          onclick="ClearLocalStorage(event)"
+                          >Logout</a
+                        >
                       </li>
                     </ul>
                   </nav>
                   <button class="vs-menu-toggle d-inline-block d-lg-none">
                     <i class="fas fa-bars"></i>
                   </button>
-                </div>
-                <div class="col-auto d-none d-xl-block">
-                  <div class="header2-btn">
-                    <a href="#" class="icon-btn style3 searchBoxTggler"
-                      ><i class="far fa-search"></i
-                    ></a>
-                    <a href="#" class="icon-btn style3 sideMenuToggler"
-                      ><i class="far fa-bars"></i
-                    ></a>
-                    <a href="appointment.html" class="vs-btn style2"
-                      >Appointment<i class="fal fa-calendar-alt"></i
-                    ></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -515,6 +544,16 @@
         </div>
       </div>
     </div>
+
+    <div class="container mt-5">
+      <h2 class="text-center">Treatment and Diagnoses</h2>
+      <div id="TreatmentDiagnoses" class="row"></div>
+    </div>
+    <div class="row" style="width: 100%">
+      <div class="col-md-7 col-sm-12 col-xs-12 diagnoses-container"></div>
+      <div class="col-xs-12 col-md-5 treatments-container"></div>
+    </div>
+
     <!-- ///////////////////////////////////////// -->
     <!--==============================
 			Footer Area
@@ -698,6 +737,8 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/Specialty.js"></script>
     <script src="assets/js/Profile.js"></script>
+    <script src="assets/js/TreatmentDiagnoses.js"></script>
+    <script src="assets/js/ChangeNav.js"></script>
   </body>
 
   <!-- Mirrored from html.vecurosoft.com/medixi/demo/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Sep 2024 13:48:03 GMT -->

@@ -30,17 +30,16 @@ namespace MasterPeiceBackEnd.TokenReaderNS
                 ValidIssuer = jwtSettings.GetValue<string>("Issuer"),
                 ValidAudience = jwtSettings.GetValue<string>("Audience"),
                 IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
-                ClockSkew = TimeSpan.Zero // Optional: to avoid a clock skew issue
+                ClockSkew = TimeSpan.Zero 
             };
 
             try
             {
                 var principal = tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
-                return principal; // Returns the validated ClaimsPrincipal
+                return principal; 
             }
             catch (Exception ex)
             {
-                // Token validation failed, return null or handle as needed
                 Console.WriteLine($"Token validation failed: {ex.Message}");
                 return null;
             }

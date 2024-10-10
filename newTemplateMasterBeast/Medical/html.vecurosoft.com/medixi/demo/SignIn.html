@@ -131,7 +131,15 @@
             <a href="contact.html">Contact Us</a>
           </li>
           <li>
-            <a href="SignIn.html">Login & Register</a>
+            <a href="SignIn.html" id="signInss">Login & Register</a>
+          </li>
+          <li>
+            <a
+              href="SignIn.html"
+              id="Logout1"
+              onclick="ClearLocalStorage(event)"
+              >Logout</a
+            >
           </li>
         </ul>
       </div>
@@ -291,6 +299,11 @@
                   <li>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                   </li>
+                  <li>
+                    <a href="Profile.html" id="profile" style="display: none">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -355,7 +368,17 @@
                       <a href="contact.html">Contact</a>
                     </li>
                     <li>
-                      <a href="SignIn.html">Login & Register</a>
+                      <a href="SignIn.html" id="signInssd"
+                        >Login & Register</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="SignIn.html"
+                        id="Logout"
+                        onclick="ClearLocalStorage(event)"
+                        >Logout</a
+                      >
                     </li>
                   </ul>
                 </nav>
@@ -363,19 +386,7 @@
                   <i class="fas fa-bars"></i>
                 </button>
               </div>
-              <div class="col-auto d-none d-xl-block">
-                <div class="header2-btn">
-                  <a href="#" class="icon-btn style3 searchBoxTggler"
-                    ><i class="far fa-search"></i
-                  ></a>
-                  <a href="#" class="icon-btn style3 sideMenuToggler"
-                    ><i class="far fa-bars"></i
-                  ></a>
-                  <a href="appointment.html" class="vs-btn style2"
-                    >Appointment<i class="fal fa-calendar-alt"></i
-                  ></a>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -657,5 +668,6 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/Signin.js"></script>
     <script type="module" src="assets/js/SigninWithGoogle.js"></script>
+    <script src="assets/js/ChangeNav.js"></script>
   </body>
 </html>

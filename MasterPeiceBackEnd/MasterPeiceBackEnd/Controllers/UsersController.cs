@@ -63,7 +63,7 @@ namespace MasterPeiceBackEnd.Controllers
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
                 Password = user.Password,
-                //UserImage = SaveImage(user.UserImage),
+                UserImage = SaveImage(user.UserImage),
                 PasswordHash = hash,
                 PasswordSalt = salt,
             };

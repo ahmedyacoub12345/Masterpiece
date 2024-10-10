@@ -45,6 +45,8 @@ public partial class MedicalAppContext : DbContext
     public virtual DbSet<User> Users { get; set; }
     public DbSet<Availability> Availabilities { get; set; }
     public DbSet<ContactUs> contactUs { get; set; }
+    public virtual DbSet<UserPayment> Payments { get; set; }
+
 
 
 
@@ -236,6 +238,35 @@ public partial class MedicalAppContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
         });
+        modelBuilder.Entity<UserPayment>(entity =>
+        {
+            entity.HasKey(e => e.PaymentId).HasName("PK__Payments__ED1FC9EA12D776EF");
+
+            entity.Property(e => e.PaymentId).HasColumnName("payment_id");
+            entity.Property(e => e.Amount)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("amount");
+            entity.Property(e => e.PaymentDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("payment_date");
+            entity.Property(e => e.PaymentMethod)
+                .HasMaxLength(50)
+                .HasColumnName("payment_method");
+            entity.Property(e => e.PaymentStatus)
+                .HasMaxLength(50)
+                .HasColumnName("payment_status");
+            entity.Property(e => e.TransactionId)
+                .HasMaxLength(100)
+                .HasColumnName("transaction_id");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Payments)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Payments__user_i__02084FDA");
+        });
+
 
         OnModelCreatingPartial(modelBuilder);
     }

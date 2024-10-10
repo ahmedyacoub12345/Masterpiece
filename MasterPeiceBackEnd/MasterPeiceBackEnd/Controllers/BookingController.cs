@@ -10,14 +10,14 @@ namespace MasterPeiceBackEnd.Controllers
     [ApiController]
     public class BookingController : ControllerBase
     {
-        private readonly MedicalAppContext _db; 
+        private readonly MedicalAppContext _db;
 
         public BookingController(MedicalAppContext db)
         {
             _db = db;
         }
         [HttpGet("GetAllBookings")]
-        public IActionResult GetAllBookings() 
+        public IActionResult GetAllBookings()
         {
             var data = _db.Bookings.ToList();
             return Ok(data);
@@ -104,7 +104,7 @@ namespace MasterPeiceBackEnd.Controllers
                 time = book.Time,
                 bookingDate = DateTime.Now,
                 paymentStatus = book.PaymentStatus,
-                
+
             };
 
             return CreatedAtAction(nameof(CreateBooking), new { id = book.BookingId }, response);
@@ -112,10 +112,74 @@ namespace MasterPeiceBackEnd.Controllers
         [HttpGet("GetTime/{id}")]
         public IActionResult getTime(int id)
         {
-            var data = _db.Bookings.Where(a=>a.DoctorId==id).Select(a=>a.Time).ToList();
+            var data = _db.Bookings.Where(a => a.DoctorId == id).Select(a => a.Time).ToList();
             return Ok(data);
 
+        }
+        [HttpGet("GetAllUsers/{doctorId}")]
+        public IActionResult GetAllUsers(int doctorId)
+        {
+            var data = _db.Bookings
+                .Where(booking => booking.DoctorId == doctorId)
+                .Select(booking => new
+                {
+                    UserID = booking.UserId,
+                    Username = booking.User.Username,
+                    PhoneNumber = booking.User.PhoneNumber,
+                    Email = booking.User.Email,
+                    Address = booking.User.Address,
+                    UserImage = booking.User.UserImage,
+                })
+                .Distinct()
+                .ToList();
+
+            return Ok(data);
+        }
+        [HttpPost("BookAppointment")]
+        public IActionResult BookAnAppointment([FromBody] BookingModel bookingData)
+        {
+            if (bookingData == null)
+            {
+                return BadRequest("Invalid booking data");
+            }
+
+            // Create a new Booking entity from the BookingModel
+            var booking = new Booking
+            {
+                UserId = bookingData.UserId,
+                DoctorId = bookingData.DoctorId,
+                Time = bookingData.Time,
+                BookingDate = DateTime.Parse(bookingData.Date), // Assuming booking date is passed as string in ISO 8601 format
+                PaymentStatus = bookingData.PaymentStatus
+            };
+
+            try
+            {
+                // Add the booking data to the database
+                _db.Bookings.Add(booking);
+
+                // Save changes to the database
+                _db.SaveChanges();
+            }
+            catch (DbUpdateException e)
+            {
+                // Log the error (uncomment ex variable name and write a log if needed)
+                return StatusCode(500, "Internal server error while saving booking data.");
+            }
+
+            return Ok(new { message = "Appointment booked successfully!" });
+        }
+
+
+        public class BookingModel
+        {
+            public int UserId { get; set; }
+            public int DoctorId { get; set; }
+            public TimeOnly Time { get; set; }  // Change string to TimeOnly
+            public string Date { get; set; }
+            public string PaymentStatus { get; set; }
         }
 
     }
 }
+

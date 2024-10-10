@@ -109,7 +109,7 @@ async function showDoctorDetail() {
                         <img src="https://localhost:44364/${result.doctorImage}" class="img-thumbnail center-block" alt="" style="height:fit-content;width: fit-content;">
                         <div class="stutas"></div>
                     </div>
-                    <h3 class="header relative bold">Dr: ${result.name}</h3>
+                    <h3 class="header relative bold" style ="margin-top :50px;">Dr: ${result.name}</h3>
                     <h5 class="boldy">${result.clinicAddress}</h5>
                     <p class="desc relative mb-15">${result.description}.</p>
                     <div class="doc-rating mb-30">
@@ -169,7 +169,6 @@ async function AddNewDoctor() {
     form.reset();
   } catch (error) {
     console.error("There was a problem with the fetch operation:", error);
-    alert("An error occurred while adding the doctor.");
   }
 }
 AddNewDoctor();
@@ -212,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error fetching doctor information:", error);
     }
   }
-
+  ////////////////////////////////////////////
   async function updateDoctor(event) {
     event.preventDefault();
 
@@ -228,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
       degree: document.getElementById("degree").value.trim(),
       university: document.getElementById("university").value.trim(),
       doctorImage: document.getElementById("doctorImage").files[0],
-      userId: 1, // Adjust if needed
+      userId: 1,
       availability: "Available",
     };
 
@@ -286,4 +285,64 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("successModal").style.display = "none";
     }
   };
+});
+/////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const doctorId = localStorage.getItem("doctorId");
+  const usersUrl = `https://localhost:44364/api/Booking/GetAllUsers/${doctorId}`;
+  const recentVisitContainer = document.getElementById("RecentVisit");
+
+  try {
+    const response = await fetch(usersUrl);
+    const users = await response.json();
+
+    recentVisitContainer.innerHTML = "";
+
+    if (users.length === 0) {
+      recentVisitContainer.innerHTML = `
+        <li class="activity-list warning">
+          <div class="detail-info v2">
+            <p class="text-muted">No recent visits found for this doctor.</p>
+          </div>
+        </li>
+      `;
+    } else {
+      const activityList = users
+        .map(
+          (user) => `
+        <li class="activity-list warning">
+          <div class="detail-info v2">
+            <div class="doc-img-con pull-left mr-10">
+              <img src="https://localhost:44364/${
+                user.userImage || "../data/profile/default-avatar.png"
+              }" width="80" alt="">
+            </div>
+            <div class="visit-doc">
+              <p class="message">
+                ${user.username} 
+              </p>
+              <small class="text-muted">
+                ${user.email} | ${user.phoneNumber}
+              </small>
+            </div>
+            
+          </div>
+        </li>
+      `
+        )
+        .join("");
+
+      recentVisitContainer.innerHTML = activityList; // Populate the list with user activities
+    }
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    recentVisitContainer.innerHTML = `
+      <li class="activity-list danger">
+        <div class="detail-info v2">
+          <p class="text-muted">Failed to load recent visits. Please try again later.</p>
+        </div>
+      </li>
+    `;
+  }
 });

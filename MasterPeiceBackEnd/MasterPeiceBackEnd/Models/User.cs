@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ViewEngines;
+﻿using MasterPeiceBackEnd.Models;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using PayPal.Api;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
@@ -40,5 +42,7 @@ public partial class User
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
     public virtual ICollection<Treatment> Treatments { get; set; } = new List<Treatment>();
+    public virtual ICollection<UserPayment> Payments { get; set; } = new List<UserPayment>();
+
 
 }

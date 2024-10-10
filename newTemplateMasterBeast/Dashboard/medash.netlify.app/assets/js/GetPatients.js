@@ -1,69 +1,193 @@
-const url = "https://localhost:44364/api/Users";
-async function GetUsers() {
-  var response = await fetch(url);
+// const url = "https://localhost:44364/api/Users";
+// async function GetUsers() {
+//   var response = await fetch(url);
 
-  var result = await response.json();
+//   var result = await response.json();
 
-  var container = document.getElementById("AllPatients");
+//   var container = document.getElementById("AllPatients");
 
-  result.forEach((element) => {
-    container.innerHTML += `
-    <div class="col-lg-4 col-md-6">
-    <section class="box ">
-                        <div class="content-body p">
-                            <div class="row">
-                                <div class="doctors-list patient relative">
-                                    <div class="doctors-head relative text-center">
-                                        <div class="patient-img img-circle">
-                                            <img src="https://localhost:44364/${element.userImage}" class="rad-50 center-block" style = "width:120px;height:120px" alt="">
-                                            <div class="stutas recent"></div>
-                                        </div>
-                                        <h3 class="header w-text relative bold">Name : ${element.username}</h3>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="patients-info relative" >
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">${element.address}</h5>
-                                                            <h6>Patient Address</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="patient-card has-shadow2">
-                                                    <div class="doc-info-wrap">
-                                                        <div class="patient-info">
-                                                            <h5 class="bold">${element.phoneNumber}</h5>
-                                                            <h6>Phone Number</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div><!-- end row -->
-                                    
-                                    <div class="col-xs-12 mb-30">
-                                        <div class="form-group no-mb">
-                                            <a class="btn btn-primary btn-lg gradient-blue" href="hos-patient-dash.html" style="width:100%" onclick="getUserId(${element.userID})")> View Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    </div>`;
-  });
-}
-GetUsers();
+//   result.forEach((element) => {
+//     container.innerHTML += `
+//     <div class="col-lg-4 col-md-6">
+//     <section class="box ">
+//                         <div class="content-body p">
+//                             <div class="row">
+//                                 <div class="doctors-list patient relative">
+//                                     <div class="doctors-head relative text-center">
+//                                         <div class="patient-img img-circle">
+//                                             <img src="https://localhost:44364/${element.userImage}" class="rad-50 center-block" style = "width:120px;height:120px" alt="">
+//                                             <div class="stutas recent"></div>
+//                                         </div>
+//                                         <h3 class="header w-text relative bold">Name : ${element.username}</h3>
+
+//                                     </div>
+//                                     <div class="row">
+//                                         <div class="patients-info relative" >
+//                                             <div class="col-sm-6 col-xs-12">
+//                                                 <div class="patient-card has-shadow2">
+//                                                     <div class="doc-info-wrap">
+//                                                         <div class="patient-info">
+//                                                             <h5 class="bold">${element.address}</h5>
+//                                                             <h6>Patient Address</h6>
+//                                                         </div>
+//                                                     </div>
+//                                                 </div>
+//                                             </div>
+//                                             <div class="col-sm-6 col-xs-12">
+//                                                 <div class="patient-card has-shadow2">
+//                                                     <div class="doc-info-wrap">
+//                                                         <div class="patient-info">
+//                                                             <h5 class="bold">${element.phoneNumber}</h5>
+//                                                             <h6>Phone Number</h6>
+//                                                         </div>
+//                                                     </div>
+//                                                 </div>
+//                                             </div>
+
+//                                         </div>
+//                                     </div><!-- end row -->
+
+//                                     <div class="col-xs-12 mb-30">
+//                                         <div class="form-group no-mb">
+//                                             <a class="btn btn-primary btn-lg gradient-blue" href="hos-patient-dash.html" style="width:100%" onclick="getUserId(${element.userID})")> View Profile</a>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </section>
+//                     </div>`;
+//   });
+// }
+// GetUsers();
 
 function getUserId(id) {
   localStorage.setItem("UserId", id);
 }
+
+const url = "https://localhost:44364/api/Users";
+const doctorId = localStorage.getItem("doctorID");
+const adminId = localStorage.getItem("adminId");
+
+async function GetUsers() {
+  const response = await fetch(url);
+  const result = await response.json();
+  const container = document.getElementById("AllPatients");
+
+  result.forEach((element) => {
+    container.innerHTML += `
+      <div class="col-lg-4 col-md-6">
+        <section class="box">
+          <div class="content-body p">
+            <div class="row">
+              <div class="doctors-list patient relative">
+                <div class="doctors-head relative text-center">
+                  <div class="patient-img img-circle">
+                    <img src="https://localhost:44364/${element.userImage}" class="rad-50 center-block" style="width:120px;height:120px" alt="">
+                    <div class="status recent"></div>
+                  </div>
+                  <h3 class="header w-text relative bold">Name: ${element.username}</h3>
+                </div>
+                <div class="row">
+                  <div class="patients-info relative">
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="patient-card has-shadow2">
+                        <div class="doc-info-wrap">
+                          <div class="patient-info">
+                            <h5 class="bold">${element.address}</h5>
+                            <h6>Patient Address</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                      <div class="patient-card has-shadow2">
+                        <div class="doc-info-wrap">
+                          <div class="patient-info">
+                            <h5 class="bold">${element.phoneNumber}</h5>
+                            <h6>Phone Number</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end row -->
+                <div class="col-xs-12 mb-30">
+                  <div class="form-group no-mb">
+                    <a class="btn btn-primary btn-lg gradient-blue" href="hos-patient-dash.html" style="width:100%" onclick="getUserId(${element.userID})"> View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>`;
+  });
+}
+
+async function fetchUsersBasedOnRole() {
+  if (adminId) {
+    await GetUsers();
+  } else if (doctorId) {
+    const response = await fetch(
+      `https://localhost:44364/api/Booking/GetAllUsers/${doctorId}`
+    );
+    const result = await response.json();
+    const container = document.getElementById("AllPatients");
+
+    result.forEach((element) => {
+      container.innerHTML += `
+        <div class="col-lg-4 col-md-6">
+          <section class="box">
+            <div class="content-body p">
+              <div class="row">
+                <div class="doctors-list patient relative">
+                  <div class="doctors-head relative text-center">
+                    <div class="patient-img img-circle">
+                      <img src="https://localhost:44364/${element.userImage}" class="rad-50 center-block" style="width:120px;height:120px" alt="">
+                      <div class="status recent"></div>
+                    </div>
+                    <h3 class="header w-text relative bold">Name: ${element.username}</h3>
+                  </div>
+                  <div class="row">
+                    <div class="patients-info relative">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="patient-card has-shadow2">
+                          <div class="doc-info-wrap">
+                            <div class="patient-info">
+                              <h5 class="bold">${element.address}</h5>
+                              <h6>Patient Address</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="patient-card has-shadow2">
+                          <div class="doc-info-wrap">
+                            <div class="patient-info">
+                              <h5 class="bold">${element.phoneNumber}</h5>
+                              <h6>Phone Number</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end row -->
+                  <div class="col-xs-12 mb-30">
+                    <div class="form-group no-mb">
+                      <a class="btn btn-primary btn-lg gradient-blue" href="hos-patient-dash.html" style="width:100%" onclick="getUserId(${element.userID})"> View Profile</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>`;
+    });
+  }
+}
+
+fetchUsersBasedOnRole();
 
 //////////////////////////////////////////////////
 

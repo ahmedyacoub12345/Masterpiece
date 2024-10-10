@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from medash.netlify.app/html/index-hos-dashboard by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 07:20:22 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <!-- 
+        * @Package: Multipurpose Dashboard
+        * @Version: 1.0.0
+    -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dashboard</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- For iPhone -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../assets/images/apple-touch-icon-57-precomposed.png"
+    />
+    <!-- For iPhone 4 Retina display -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../assets/images/apple-touch-icon-114-precomposed.png"
+    />
+    <!-- For iPad -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../assets/images/apple-touch-icon-72-precomposed.png"
+    />
+    <!-- For iPad Retina display -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../assets/images/apple-touch-icon-144-precomposed.png"
+    />
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link
+      href="../assets/plugins/pace/pace-theme-flash.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/fonts/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/fonts/webfont/cryptocoins.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/css/animate.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link
+      href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/morris-chart/css/morris.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/calendar/fullcalendar.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="../assets/plugins/icheck/skins/minimal/minimal.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../assets/css/responsive.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CORE CSS TEMPLATE - END -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <style>
+      .dropdown .sub-menu {
+        padding-left: 15px; /* Indent the sub-menu */
+      }
+
+      .sub-menu a {
+        padding: 5px 15px; /* Add padding to sub-menu items */
+      }
+
+      .sub-menu a:hover {
+        background-color: #f1f1f1; /* Change background on hover */
+      }
+      .modal {
+        z-index: 1050; /* Adjust as needed */
+      }
+      .modal-backdrop.fade.show {
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <!-- END HEAD -->
+
+  <!-- BEGIN BODY -->
+
+  <body class=" ">
+    <!-- START TOPBAR -->
+    <div class="page-topbar gradient-blue1">
+      <div class="logo-area crypto"></div>
+      <div class="quick-area">
+        <div class="pull-left">
+          <ul class="info-menu left-links list-inline list-unstyled">
+            <li class="sidebar-toggle-wrap">
+              <a href="#" data-toggle="sidebar" class="sidebar_toggle">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+            <li class="topnav-item item1">
+              <a href="#" class="new-link w-text"
+                >Schedule
+                <span class="badge badge-primary ml-5">New</span>
+              </a>
+            </li>
+            <li class="topnav-item active item2">
+              <a href="#" class="nav-link w-text">
+                <i class="fa fa-area-chart mr-10"></i>Reports
+              </a>
+            </li>
+            <li class="topnav-item item3">
+              <a href="#" class="nav-link w-text">
+                <i class="fa fa-sitemap mr-10"></i>Trading
+              </a>
+            </li>
+
+            <li class="hidden-sm hidden-xs searchform">
+              <form action="#" method="post">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fa fa-search"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control animated fadeIn"
+                    placeholder="Search & Enter"
+                  />
+                </div>
+                <input type="submit" value="" />
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <ul class="info-menu right-links list-inline list-unstyled">
+            <li class="notify-toggle-wrapper spec">
+              <a href="#" data-toggle="dropdown" class="toggle">
+                <i class="fa fa-bell"></i>
+                <span class="badge badge-accent">3</span>
+              </a>
+              <ul class="dropdown-menu notifications animated fadeIn">
+                <li class="total">
+                  <span class="small">
+                    You have <strong>3</strong> new notifications.
+                    <a href="javascript:;" class="pull-right"
+                      >Mark all as Read</a
+                    >
+                  </span>
+                </li>
+                <li class="list">
+                  <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+                    <li class="unread available">
+                      <!-- available: success, warning, info, error -->
+                      <a href="javascript:;">
+                        <div class="notice-icon">
+                          <i class="fa fa-check"></i>
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Successful Paid Invoice #1683</strong>
+                            <span class="time small">15 mins ago</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="unread away">
+                      <!-- available: success, warning, info, error -->
+                      <a href="javascript:;">
+                        <div class="notice-icon">
+                          <i class="fa fa-clock-o"></i>
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Confirmed Dr Jack Welly visit</strong>
+                            <span class="time small">45 mins ago</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="busy">
+                      <!-- available: success, warning, info, error -->
+                      <a href="javascript:;">
+                        <div class="notice-icon">
+                          <i class="fa fa-times"></i>
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Cancel Appointment at 1:00PM</strong>
+                            <span class="time small">1 hour ago</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="available">
+                      <!-- available: success, warning, info, error -->
+                      <a href="javascript:;">
+                        <div class="notice-icon">
+                          <i class="fa fa-check"></i>
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Great Speed Notify of 1.34 LTC</strong>
+                            <span class="time small">14th Mar</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="external">
+                  <a href="javascript:;">
+                    <span>Read All Notifications</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="message-toggle-wrapper spec">
+              <a href="#" data-toggle="dropdown" class="toggle mr-15">
+                <i class="fa fa-envelope"></i>
+                <span class="badge badge-accent">7</span>
+              </a>
+              <ul class="dropdown-menu messages animated fadeIn">
+                <li class="list">
+                  <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+                    <li class="unread status-available">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-1.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Clarine Vassar</strong>
+                            <span class="time small">- 15 mins ago</span>
+                            <span
+                              class="profile-status available pull-right"
+                            ></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-away">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-2.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Brooks Latshaw</strong>
+                            <span class="time small">- 45 mins ago</span>
+                            <span class="profile-status away pull-right"></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-busy">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-3.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Clementina Brodeur</strong>
+                            <span class="time small">- 1 hour ago</span>
+                            <span class="profile-status busy pull-right"></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-offline">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-4.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Carri Busey</strong>
+                            <span class="time small">- 5 hours ago</span>
+                            <span
+                              class="profile-status offline pull-right"
+                            ></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-offline">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-5.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Melissa Dock</strong>
+                            <span class="time small">- Yesterday</span>
+                            <span
+                              class="profile-status offline pull-right"
+                            ></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-available">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-1.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Verdell Rea</strong>
+                            <span class="time small">- 14th Mar</span>
+                            <span
+                              class="profile-status available pull-right"
+                            ></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-busy">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-2.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Linette Lheureux</strong>
+                            <span class="time small">- 16th Mar</span>
+                            <span class="profile-status busy pull-right"></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="status-away">
+                      <a href="javascript:;">
+                        <div class="user-img">
+                          <img
+                            src="../data/profile/avatar-3.png"
+                            alt="user-image"
+                            class="img-circle img-inline"
+                          />
+                        </div>
+                        <div>
+                          <span class="name">
+                            <strong>Araceli Boatright</strong>
+                            <span class="time small">- 16th Mar</span>
+                            <span class="profile-status away pull-right"></span>
+                          </span>
+                          <span class="desc small">
+                            Lorem ipsum dolor sit elit fugiat molest.
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="external">
+                  <a href="javascript:;">
+                    <span>Read All Messages</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="profile">
+              <a href="#" data-toggle="dropdown" class="toggle">
+                <img
+                  src="../data/profile/profile.jpg"
+                  alt="user-image"
+                  class="img-circle img-inline"
+                />
+                <span>Arnold Ramsy <i class="fa fa-angle-down"></i></span>
+              </a>
+              <ul class="dropdown-menu profile animated fadeIn">
+                <li>
+                  <a href="hos-faq.html">
+                    <i class="fa fa-wrench"></i> Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="hos-doctor-profile.html">
+                    <i class="fa fa-user"></i> Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="hos-support.html">
+                    <i class="fa fa-info"></i> Help
+                  </a>
+                </li>
+                <li class="last">
+                  <a href="ui-login.html" onclick="ClearLocalStorage(event)">
+                    <i class="fa fa-lock"></i> Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid container-fluid">
+      <!-- SIDEBAR - START -->
+
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Sidebar (Left) -->
+          <div class="col-md-3">
+            <div class="page-sidebar fixedscroll">
+              <!-- MAIN MENU - START -->
+              <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+                <ul class="wraplist">
+                  <li class="menusection">Main</li>
+                  <li class="open">
+                    <a href="index-hos-dashboard.html">
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/1.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Dashboard</span>
+                    </a>
+                  </li>
+                  <li id="DoctorLi" class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#doctorsDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/2.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Doctors</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="doctorsDropdown">
+                      <li>
+                        <a
+                          href="hos-all-doctors.html"
+                          style="color: rgb(74, 74, 74)"
+                          >All Doctors</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="hos-add-doctor.html"
+                          style="color: rgb(74, 74, 74)"
+                          >Add Doctor</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#patientsDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/5.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Patients</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="patientsDropdown">
+                      <li>
+                        <a
+                          href="hos-all-patients.html"
+                          style="color: rgb(74, 74, 74)"
+                          >All Patients</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="Appointment" class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#appointmentsDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/6.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Appointments</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="appointmentsDropdown">
+                      <li>
+                        <a
+                          href="hos-schedule.html"
+                          style="color: rgb(74, 74, 74)"
+                          >Doctor Schedule</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#billingDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/7.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Billing</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="billingDropdown">
+                      <li>
+                        <a
+                          href="hos-payment.html"
+                          style="color: rgb(74, 74, 74)"
+                          >Payments</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="Blog" class="active dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#blogDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/4.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Blogs</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="blogDropdown">
+                      <li>
+                        <a href="hos-Blogs.html" style="color: rgb(74, 74, 74)"
+                          >Add Blog</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#accessDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/10.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Access Pages</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="accessDropdown">
+                      <li>
+                        <a href="ui-login.html" style="color: rgb(74, 74, 74)"
+                          >Login</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      data-toggle="collapse"
+                      data-target="#supportDropdown"
+                    >
+                      <i class="img">
+                        <img
+                          src="../data/hos-dash/icons/11.png"
+                          alt=""
+                          class="width-20"
+                        />
+                      </i>
+                      <span class="title">Support</span>
+                      <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu collapse" id="supportDropdown">
+                      <li>
+                        <a href="hos-faq.html" style="color: rgb(74, 74, 74)"
+                          >FAQ</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="hos-support.html"
+                          style="color: rgb(74, 74, 74)"
+                          >Help center</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- MAIN MENU - END -->
+            </div>
+          </div>
+
+          <!-- Content (Right) -->
+          <div class="col-md-9" style="margin-top: 3rem; margin-bottom: 3rem">
+            <div class="container mt-5 blog-management">
+              <div id="blog-list" class="mb-5">
+                <h3>All Blogs</h3>
+                <br />
+                <div class="row" id="blogs"></div>
+              </div>
+
+              <div id="add-blog">
+                <h3>Add New Blog</h3>
+                <form id="addBlogForm" class="needs-validation" novalidate>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="blogTitle">Title</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="blogTitle"
+                        placeholder="Enter blog title"
+                        required
+                      />
+                      <div class="invalid-feedback">Please enter a title.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="blogPublishedAt">Published At</label>
+                      <input
+                        type="datetime-local"
+                        class="form-control"
+                        id="blogPublishedAt"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please select a publish date.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="blogContent">Content</label>
+                    <textarea
+                      class="form-control"
+                      id="blogContent"
+                      rows="5"
+                      placeholder="Enter blog content"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">Please enter content.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="blogImage">Blog Image</label>
+                    <input
+                      type="file"
+                      class="form-control-file"
+                      id="blogImage"
+                      accept="image/*"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Add Blog
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //////////////////////////////////////////////////// -->
+      <!-- Edit Blog Modal -->
+      <div
+        class="modal fade"
+        id="editBlogModal"
+        tabindex="1"
+        aria-labelledby="editBlogModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editBlogModalLabel">Edit Blog</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="editBlogForm">
+                <div class="mb-3">
+                  <label for="editBlogTitle" class="form-label">Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editBlogTitle"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="editBlogContent" class="form-label"
+                    >Content</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="editBlogContent"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="editBlogPublishedAt" class="form-label"
+                    >Published At</label
+                  >
+                  <input
+                    type="datetime-local"
+                    class="form-control"
+                    id="editBlogPublishedAt"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="editBlogImage" class="form-label"
+                    >Blog Image</label
+                  >
+                  <input type="file" class="form-control" id="editBlogImage" />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Update Blog
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ////////////////////////////////////////////////// -->
+      <div class="chatapi-windows"></div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/plugins/pace/pace.min.js"></script>
+    <script src="../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/plugins/viewport/viewportchecker.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="../assets/js/jquery.min.js"><\/script>');
+    </script>
+    <!-- CORE JS FRAMEWORK - END -->
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <script src="../assets/plugins/echarts/echarts-custom-for-dashboard.js"></script>
+
+    <script src="../assets/plugins/flot-chart/jquery.flot.js"></script>
+    <script src="../assets/plugins/flot-chart/jquery.flot.time.js"></script>
+    <script src="../assets/js/chart-flot.js"></script>
+
+    <script src="../assets/js/dashboard-hos.js"></script>
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+    <!-- Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="../assets/js/scripts.js"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+    <script src="../assets/js/ChangeNav.js"></script>
+    <script src="../assets/js/Blogs.js"></script>
+  </body>
+
+  <!-- Mirrored from medash.netlify.app/html/index-hos-dashboard by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 07:21:33 GMT -->
+</html>

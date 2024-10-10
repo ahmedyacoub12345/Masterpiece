@@ -15,6 +15,11 @@ public partial class Doctor
     public string Name { get; set; } = null!;
     public string Description { get; set; }
     public string Email { get; set; }
+    public string Password { get; set; } = null!;
+
+    public byte[]? PasswordSalt { get; set; }
+
+    public byte[]? PasswordHash { get; set; }
 
     public string Qualifications { get; set; } = null!;
 

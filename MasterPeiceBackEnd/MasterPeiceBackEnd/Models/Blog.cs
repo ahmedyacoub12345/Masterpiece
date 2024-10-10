@@ -11,5 +11,7 @@ public partial class Blog
 
     public string Content { get; set; } = null!;
 
+    public string? BlogImage { get; set; }
+
     public DateTime PublishedAt { get; set; }
 }

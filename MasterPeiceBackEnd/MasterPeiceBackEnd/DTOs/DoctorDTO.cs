@@ -15,6 +15,8 @@ namespace MasterPeiceBackEnd.DTOs
         public IFormFile? DoctorImage { get; set; }
         public string Description { get; set; }
         public string Email { get; set; }
+        public string? Password { get; set; }
+
         public string? Degree { get; set; }
         public string? University { get; set; }
 

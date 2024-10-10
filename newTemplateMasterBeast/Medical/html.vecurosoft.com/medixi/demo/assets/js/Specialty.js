@@ -1,12 +1,10 @@
 const url = "https://localhost:44364/api/Specialty/GetAllSepecialties";
-debugger;
 async function GetAllCategories() {
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
-    debugger;
     const result = await response.json();
     const container = document.getElementById("SpecialtyContainer");
     result.forEach((element) => {
