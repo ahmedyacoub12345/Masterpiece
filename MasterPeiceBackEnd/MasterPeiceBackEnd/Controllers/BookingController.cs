@@ -150,7 +150,7 @@ namespace MasterPeiceBackEnd.Controllers
                 DoctorId = bookingData.DoctorId,
                 Time = bookingData.Time,
                 BookingDate = DateTime.Parse(bookingData.Date), // Assuming booking date is passed as string in ISO 8601 format
-                PaymentStatus = bookingData.PaymentStatus
+                PaymentStatus = "Approved"
             };
 
             try

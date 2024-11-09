@@ -1,0 +1,271 @@
+2024-10-12 14:22:54.486 +03:00 [INF] User profile is available. Using 'C:\Users\Orange\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-12 14:22:54.671 +03:00 [WRN] The WebRootPath was not found: C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\wwwroot. Static files may be unavailable.
+2024-10-12 14:22:54.696 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-12 14:22:54.696 +03:00 [INF] Hosting environment: Development
+2024-10-12 14:22:54.696 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd
+2024-10-12 14:22:54.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger - null null
+2024-10-12 14:22:55.459 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - null null
+2024-10-12 14:22:55.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger - 301 null null 741.0904ms
+2024-10-12 14:22:55.546 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - 200 null text/html;charset=utf-8 87.8012ms
+2024-10-12 14:22:55.552 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - null null
+2024-10-12 14:22:55.552 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.css - null null
+2024-10-12 14:22:55.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - null null
+2024-10-12 14:22:55.575 +03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-10-12 14:22:55.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.css - 200 202 text/css 23.5029ms
+2024-10-12 14:22:55.579 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - null null
+2024-10-12 14:22:55.579 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-10-12 14:22:55.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - 200 152034 text/css 25.537ms
+2024-10-12 14:22:55.585 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-10-12 14:22:55.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.js - null null
+2024-10-12 14:22:55.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.js - 200 null application/javascript;charset=utf-8 3.1362ms
+2024-10-12 14:22:55.589 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-10-12 14:22:55.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 10.5633ms
+2024-10-12 14:22:55.607 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-12 14:22:55.610 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 2.5814ms
+2024-10-12 14:22:55.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/_vs/browserLink - null null
+2024-10-12 14:22:55.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 69.2923ms
+2024-10-12 14:22:55.665 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.2986ms
+2024-10-12 14:22:56.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - null null
+2024-10-12 14:22:56.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 222.7936ms
+2024-10-12 14:23:19.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/api/Specialty/GetAllSepecialties - null null
+2024-10-12 14:23:19.404 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:19.408 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.SpecialtyController.GetAllSpecialties (MasterPeiceBackEnd)'
+2024-10-12 14:23:19.426 +03:00 [INF] Route matched with {action = "GetAllSpecialties", controller = "Specialty"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllSpecialties() on controller MasterPeiceBackEnd.Controllers.SpecialtyController (MasterPeiceBackEnd).
+2024-10-12 14:23:21.604 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SpecialtyID], [s].[CategoryImage], [s].[Description], [s].[Name]
+FROM [Specialties] AS [s]
+2024-10-12 14:23:21.717 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MasterPieceBackEnd.Model.Specialty, MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:21.817 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.SpecialtyController.GetAllSpecialties (MasterPeiceBackEnd) in 2384.4345ms
+2024-10-12 14:23:21.818 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.SpecialtyController.GetAllSpecialties (MasterPeiceBackEnd)'
+2024-10-12 14:23:21.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/api/Specialty/GetAllSepecialties - 499 null application/json; charset=utf-8 2555.9762ms
+2024-10-12 14:23:33.187 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44364/api/Users/LoginUsers - multipart/form-data; boundary=----WebKitFormBoundarygcd99MHveF1sBXYT 255
+2024-10-12 14:23:33.193 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:33.193 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.UsersController.Login (MasterPeiceBackEnd)'
+2024-10-12 14:23:33.203 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(MasterPeiceBackEnd.DTOs.UserLoginDTO) on controller MasterPeiceBackEnd.Controllers.UsersController (MasterPeiceBackEnd).
+2024-10-12 14:23:33.346 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__user_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Address], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[MidName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[UserImage], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__user_Email_0
+2024-10-12 14:23:33.434 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType15`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[MasterPieceBackEnd.Model.User, MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:33.451 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.UsersController.Login (MasterPeiceBackEnd) in 248.4283ms
+2024-10-12 14:23:33.451 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.UsersController.Login (MasterPeiceBackEnd)'
+2024-10-12 14:23:33.452 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44364/api/Users/LoginUsers - 200 null application/json; charset=utf-8 265.021ms
+2024-10-12 14:23:35.124 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/api/Specialty/GetAllSepecialties - null null
+2024-10-12 14:23:35.128 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:35.128 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.SpecialtyController.GetAllSpecialties (MasterPeiceBackEnd)'
+2024-10-12 14:23:35.128 +03:00 [INF] Route matched with {action = "GetAllSpecialties", controller = "Specialty"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllSpecialties() on controller MasterPeiceBackEnd.Controllers.SpecialtyController (MasterPeiceBackEnd).
+2024-10-12 14:23:35.223 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SpecialtyID], [s].[CategoryImage], [s].[Description], [s].[Name]
+FROM [Specialties] AS [s]
+2024-10-12 14:23:35.224 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MasterPieceBackEnd.Model.Specialty, MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:35.226 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.SpecialtyController.GetAllSpecialties (MasterPeiceBackEnd) in 97.5261ms
+2024-10-12 14:23:35.226 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.SpecialtyController.GetAllSpecialties (MasterPeiceBackEnd)'
+2024-10-12 14:23:35.226 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/api/Specialty/GetAllSepecialties - 200 null application/json; charset=utf-8 102.4521ms
+2024-10-12 14:23:35.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/images/d6bb34ae-6254-4818-a4d7-7ff35e8474ef.png - null null
+2024-10-12 14:23:35.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/images/3d65bdf2-0799-466a-a9ab-049309775b84.png - null null
+2024-10-12 14:23:35.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/images/5421a322-99c3-437f-9463-de955e4a352d.png - null null
+2024-10-12 14:23:35.291 +03:00 [INF] Sending file. Request path: '/d6bb34ae-6254-4818-a4d7-7ff35e8474ef.png'. Physical path: 'C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\images\d6bb34ae-6254-4818-a4d7-7ff35e8474ef.png'
+2024-10-12 14:23:35.291 +03:00 [INF] Sending file. Request path: '/3d65bdf2-0799-466a-a9ab-049309775b84.png'. Physical path: 'C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\images\3d65bdf2-0799-466a-a9ab-049309775b84.png'
+2024-10-12 14:23:35.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/images/3d65bdf2-0799-466a-a9ab-049309775b84.png - 200 650888 image/png 58.647ms
+2024-10-12 14:23:35.295 +03:00 [INF] Sending file. Request path: '/5421a322-99c3-437f-9463-de955e4a352d.png'. Physical path: 'C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\images\5421a322-99c3-437f-9463-de955e4a352d.png'
+2024-10-12 14:23:35.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/images/d6bb34ae-6254-4818-a4d7-7ff35e8474ef.png - 200 705344 image/png 59.4432ms
+2024-10-12 14:23:35.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/images/5421a322-99c3-437f-9463-de955e4a352d.png - 200 1149420 image/png 66.4442ms
+2024-10-12 14:23:39.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - null null
+2024-10-12 14:23:39.049 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:39.049 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.049 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorsBySpecialtyId/1 - null null
+2024-10-12 14:23:39.052 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:39.053 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetAction (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.054 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:39.055 +03:00 [INF] Route matched with {action = "GetAction", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAction(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:39.068 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-12 14:23:39.111 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 57.276ms
+2024-10-12 14:23:39.111 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.112 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - 400 null application/problem+json; charset=utf-8 65.0779ms
+2024-10-12 14:23:39.115 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - null null
+2024-10-12 14:23:39.115 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:39.116 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.116 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:39.117 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-12 14:23:39.117 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 1.6973ms
+2024-10-12 14:23:39.118 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.118 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - 400 null application/problem+json; charset=utf-8 2.8191ms
+2024-10-12 14:23:39.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - null null
+2024-10-12 14:23:39.121 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:39.121 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.121 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:39.122 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[SpecialtyID], [s].[CategoryImage], [s].[Description], [s].[Name]
+FROM [Specialties] AS [s]
+WHERE [s].[SpecialtyID] = @__p_0
+2024-10-12 14:23:39.122 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-12 14:23:39.123 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 1.4404ms
+2024-10-12 14:23:39.123 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - 400 null application/problem+json; charset=utf-8 2.3192ms
+2024-10-12 14:23:39.124 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - null null
+2024-10-12 14:23:39.124 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:39.124 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.124 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:39.125 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-12 14:23:39.125 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 0.9975ms
+2024-10-12 14:23:39.125 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.125 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/null - 400 null application/problem+json; charset=utf-8 1.4522ms
+2024-10-12 14:23:39.202 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__specialty_SpecialtyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorID] AS [DoctorId], [d].[Name], [d].[Description], [d].[Email], [d].[Qualifications], [d].[ClinicAddress], [d].[Phone], [d].[Availability], [d].[DoctorImage], [s].[Name] AS [SpecialtyName]
+FROM [Doctors] AS [d]
+INNER JOIN [Specialties] AS [s] ON [d].[SpecialtyID] = [s].[SpecialtyID]
+WHERE [d].[SpecialtyID] = @__specialty_SpecialtyId_0
+2024-10-12 14:23:39.204 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType10`10[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:39.210 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetAction (MasterPeiceBackEnd) in 155.1731ms
+2024-10-12 14:23:39.210 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetAction (MasterPeiceBackEnd)'
+2024-10-12 14:23:39.210 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorsBySpecialtyId/1 - 200 null application/json; charset=utf-8 161.6489ms
+2024-10-12 14:23:39.217 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/images/dded423c-5bd8-4e56-a41c-ef56f70b2894.png - null null
+2024-10-12 14:23:39.217 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/images/a778667f-c486-4a5e-b836-6c5a0096647d.png - null null
+2024-10-12 14:23:39.217 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/images/e74cf382-a09a-452c-9db8-c6a8002d5641.png - null null
+2024-10-12 14:23:39.224 +03:00 [INF] Sending file. Request path: '/e74cf382-a09a-452c-9db8-c6a8002d5641.png'. Physical path: 'C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\images\e74cf382-a09a-452c-9db8-c6a8002d5641.png'
+2024-10-12 14:23:39.225 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/images/e74cf382-a09a-452c-9db8-c6a8002d5641.png - 200 82445 image/png 7.8018ms
+2024-10-12 14:23:39.226 +03:00 [INF] Sending file. Request path: '/a778667f-c486-4a5e-b836-6c5a0096647d.png'. Physical path: 'C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\images\a778667f-c486-4a5e-b836-6c5a0096647d.png'
+2024-10-12 14:23:39.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/images/a778667f-c486-4a5e-b836-6c5a0096647d.png - 200 230138 image/png 10.3701ms
+2024-10-12 14:23:39.233 +03:00 [INF] Sending file. Request path: '/dded423c-5bd8-4e56-a41c-ef56f70b2894.png'. Physical path: 'C:\Users\Orange\Desktop\Masterpiece\MasterPeiceBackEnd\MasterPeiceBackEnd\images\dded423c-5bd8-4e56-a41c-ef56f70b2894.png'
+2024-10-12 14:23:39.239 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/images/dded423c-5bd8-4e56-a41c-ef56f70b2894.png - 200 705422 image/png 22.2411ms
+2024-10-12 14:23:43.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - null null
+2024-10-12 14:23:43.085 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorsBySpecialtyId/1 - null null
+2024-10-12 14:23:43.085 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.085 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.086 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.086 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.086 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetAction (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.086 +03:00 [INF] Route matched with {action = "GetAction", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAction(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.090 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/api/Availability/GetAllAvailabilityDateByDoctorId/2 - null null
+2024-10-12 14:23:43.091 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/api/Users/ShowUserByID/1 - null null
+2024-10-12 14:23:43.091 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.AvailabilityController.GetAllAvailabilityDate (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.092 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[SpecialtyID], [s].[CategoryImage], [s].[Description], [s].[Name]
+FROM [Specialties] AS [s]
+WHERE [s].[SpecialtyID] = @__p_0
+2024-10-12 14:23:43.092 +03:00 [INF] Route matched with {action = "GetAllAvailabilityDate", controller = "Availability"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAvailabilityDate(Int32) on controller MasterPeiceBackEnd.Controllers.AvailabilityController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.093 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.093 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.UsersController.GetUserById (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.095 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__specialty_SpecialtyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorID] AS [DoctorId], [d].[Name], [d].[Description], [d].[Email], [d].[Qualifications], [d].[ClinicAddress], [d].[Phone], [d].[Availability], [d].[DoctorImage], [s].[Name] AS [SpecialtyName]
+FROM [Doctors] AS [d]
+INNER JOIN [Specialties] AS [s] ON [d].[SpecialtyID] = [s].[SpecialtyID]
+WHERE [d].[SpecialtyID] = @__specialty_SpecialtyId_0
+2024-10-12 14:23:43.096 +03:00 [INF] Route matched with {action = "GetUserById", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserById(Int32) on controller MasterPeiceBackEnd.Controllers.UsersController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.096 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType10`10[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:43.098 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetAction (MasterPeiceBackEnd) in 12.0254ms
+2024-10-12 14:23:43.098 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetAction (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorsBySpecialtyId/1 - 200 null application/json; charset=utf-8 13.4557ms
+2024-10-12 14:23:43.105 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorID], [d].[Availability], [d].[ClinicAddress], [d].[Degree], [d].[Description], [d].[DoctorImage], [d].[Email], [d].[Name], [d].[Password], [d].[PasswordHash], [d].[PasswordSalt], [d].[Phone], [d].[Qualifications], [d].[SpecialtyID], [d].[University], [d].[UserID]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorID] = @__p_0
+2024-10-12 14:23:43.107 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorID], [d].[Availability], [d].[ClinicAddress], [d].[Degree], [d].[Description], [d].[DoctorImage], [d].[Email], [d].[Name], [d].[Password], [d].[PasswordHash], [d].[PasswordSalt], [d].[Phone], [d].[Qualifications], [d].[SpecialtyID], [d].[University], [d].[UserID]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorID] = @__p_0
+2024-10-12 14:23:43.114 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Address], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[MidName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[UserImage], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserID] = @__p_0
+2024-10-12 14:23:43.114 +03:00 [INF] Executing OkObjectResult, writing value of type 'MasterPieceBackEnd.Model.User'.
+2024-10-12 14:23:43.115 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.UsersController.GetUserById (MasterPeiceBackEnd) in 19.3553ms
+2024-10-12 14:23:43.115 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.UsersController.GetUserById (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.115 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/api/Users/ShowUserByID/1 - 200 null application/json; charset=utf-8 24.3124ms
+2024-10-12 14:23:43.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/api/Doctors/GetDoctorById/2 - null null
+2024-10-12 14:23:43.121 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.121 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctors (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.122 +03:00 [INF] Route matched with {action = "GetDoctors", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctors(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.125 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorID], [d].[Availability], [d].[ClinicAddress], [d].[Degree], [d].[Description], [d].[DoctorImage], [d].[Email], [d].[Name], [d].[Password], [d].[PasswordHash], [d].[PasswordSalt], [d].[Phone], [d].[Qualifications], [d].[SpecialtyID], [d].[University], [d].[UserID]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorID] = @__p_0
+2024-10-12 14:23:43.140 +03:00 [INF] Executing OkObjectResult, writing value of type 'MasterPieceBackEnd.Model.Doctor'.
+2024-10-12 14:23:43.144 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctors (MasterPeiceBackEnd) in 21.501ms
+2024-10-12 14:23:43.144 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctors (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.144 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/api/Doctors/GetDoctorById/2 - 200 null application/json; charset=utf-8 23.473ms
+2024-10-12 14:23:43.150 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__specialty_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorID] AS [DoctorId], [d].[Name], [d].[Description], [d].[Email], [d].[Qualifications], [d].[ClinicAddress], [d].[Phone], [d].[Availability], [d].[DoctorImage], [d].[University], [d].[Degree], [s].[Name] AS [SpecialtyName]
+FROM [Doctors] AS [d]
+INNER JOIN [Specialties] AS [s] ON [d].[SpecialtyID] = [s].[SpecialtyID]
+WHERE [d].[DoctorID] = @__specialty_DoctorId_0
+2024-10-12 14:23:43.151 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType11`12[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:43.153 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/api/Booking/GetTime/2 - null null
+2024-10-12 14:23:43.154 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.154 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.BookingController.getTime (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.154 +03:00 [INF] Route matched with {action = "getTime", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getTime(Int32) on controller MasterPeiceBackEnd.Controllers.BookingController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.155 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 69.541ms
+2024-10-12 14:23:43.155 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - 200 null application/json; charset=utf-8 71.3575ms
+2024-10-12 14:23:43.157 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - null null
+2024-10-12 14:23:43.157 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.157 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.157 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.158 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorID], [d].[Availability], [d].[ClinicAddress], [d].[Degree], [d].[Description], [d].[DoctorImage], [d].[Email], [d].[Name], [d].[Password], [d].[PasswordHash], [d].[PasswordSalt], [d].[Phone], [d].[Qualifications], [d].[SpecialtyID], [d].[University], [d].[UserID]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorID] = @__p_0
+2024-10-12 14:23:43.159 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__available_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[DoctorId], [a].[AvailabilityId], [a].[Date], CONVERT(varchar(100), [a].[StartTime]) AS [StartTime], CONVERT(varchar(100), [a].[EndTime]) AS [EndTime]
+FROM [Availabilities] AS [a]
+WHERE [a].[DoctorId] = @__available_DoctorId_0
+2024-10-12 14:23:43.159 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__specialty_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorID] AS [DoctorId], [d].[Name], [d].[Description], [d].[Email], [d].[Qualifications], [d].[ClinicAddress], [d].[Phone], [d].[Availability], [d].[DoctorImage], [d].[University], [d].[Degree], [s].[Name] AS [SpecialtyName]
+FROM [Doctors] AS [d]
+INNER JOIN [Specialties] AS [s] ON [d].[SpecialtyID] = [s].[SpecialtyID]
+WHERE [d].[DoctorID] = @__specialty_DoctorId_0
+2024-10-12 14:23:43.160 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType11`12[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:43.160 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 2.9476ms
+2024-10-12 14:23:43.160 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - 200 null application/json; charset=utf-8 3.4236ms
+2024-10-12 14:23:43.160 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType2`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:43.162 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - null null
+2024-10-12 14:23:43.163 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.163 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.163 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.165 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.AvailabilityController.GetAllAvailabilityDate (MasterPeiceBackEnd) in 72.6536ms
+2024-10-12 14:23:43.165 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.AvailabilityController.GetAllAvailabilityDate (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.166 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/api/Availability/GetAllAvailabilityDateByDoctorId/2 - 200 null application/json; charset=utf-8 75.8315ms
+2024-10-12 14:23:43.169 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorID], [d].[Availability], [d].[ClinicAddress], [d].[Degree], [d].[Description], [d].[DoctorImage], [d].[Email], [d].[Name], [d].[Password], [d].[PasswordHash], [d].[PasswordSalt], [d].[Phone], [d].[Qualifications], [d].[SpecialtyID], [d].[University], [d].[UserID]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorID] = @__p_0
+2024-10-12 14:23:43.170 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Time]
+FROM [Bookings] AS [b]
+WHERE [b].[DoctorId] = @__id_0
+2024-10-12 14:23:43.171 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__specialty_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorID] AS [DoctorId], [d].[Name], [d].[Description], [d].[Email], [d].[Qualifications], [d].[ClinicAddress], [d].[Phone], [d].[Availability], [d].[DoctorImage], [d].[University], [d].[Degree], [s].[Name] AS [SpecialtyName]
+FROM [Doctors] AS [d]
+INNER JOIN [Specialties] AS [s] ON [d].[SpecialtyID] = [s].[SpecialtyID]
+WHERE [d].[DoctorID] = @__specialty_DoctorId_0
+2024-10-12 14:23:43.172 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType11`12[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:43.172 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 9.1573ms
+2024-10-12 14:23:43.172 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.173 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - 200 null application/json; charset=utf-8 11.3041ms
+2024-10-12 14:23:43.173 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.TimeOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-10-12 14:23:43.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - null null
+2024-10-12 14:23:43.174 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:43.174 +03:00 [INF] Executing endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.174 +03:00 [INF] Route matched with {action = "GetDoctorDetails", controller = "Doctors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDoctorDetails(Int32) on controller MasterPeiceBackEnd.Controllers.DoctorsController (MasterPeiceBackEnd).
+2024-10-12 14:23:43.175 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.BookingController.getTime (MasterPeiceBackEnd) in 20.5877ms
+2024-10-12 14:23:43.175 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.BookingController.getTime (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/api/Booking/GetTime/2 - 200 null application/json; charset=utf-8 22.1417ms
+2024-10-12 14:23:43.176 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorID], [d].[Availability], [d].[ClinicAddress], [d].[Degree], [d].[Description], [d].[DoctorImage], [d].[Email], [d].[Name], [d].[Password], [d].[PasswordHash], [d].[PasswordSalt], [d].[Phone], [d].[Qualifications], [d].[SpecialtyID], [d].[University], [d].[UserID]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorID] = @__p_0
+2024-10-12 14:23:43.177 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__specialty_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorID] AS [DoctorId], [d].[Name], [d].[Description], [d].[Email], [d].[Qualifications], [d].[ClinicAddress], [d].[Phone], [d].[Availability], [d].[DoctorImage], [d].[University], [d].[Degree], [s].[Name] AS [SpecialtyName]
+FROM [Doctors] AS [d]
+INNER JOIN [Specialties] AS [s] ON [d].[SpecialtyID] = [s].[SpecialtyID]
+WHERE [d].[DoctorID] = @__specialty_DoctorId_0
+2024-10-12 14:23:43.177 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType11`12[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], MasterPeiceBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 14:23:43.177 +03:00 [INF] Executed action MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd) in 3.0338ms
+2024-10-12 14:23:43.177 +03:00 [INF] Executed endpoint 'MasterPeiceBackEnd.Controllers.DoctorsController.GetDoctorDetails (MasterPeiceBackEnd)'
+2024-10-12 14:23:43.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44364/Api/Products/GetDoctorDetails/2 - 200 null application/json; charset=utf-8 3.5767ms
+2024-10-12 14:23:49.009 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44364/api/Booking/BookAnAppointments - multipart/form-data; boundary=----WebKitFormBoundaryWWkRBsAC5shHnL6Z 562
+2024-10-12 14:23:49.011 +03:00 [INF] CORS policy execution successful.
+2024-10-12 14:23:49.013 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44364/api/Booking/BookAnAppointments - 404 null null 4.0775ms
+2024-10-12 14:23:49.014 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:44364/api/Booking/BookAnAppointments, Response status code: 404
